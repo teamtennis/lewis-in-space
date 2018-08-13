@@ -5,9 +5,21 @@ import html from '../html.js';
 let template = function() {
     return html`   
         <section>
-            <img src="../../img/rocket-placeholder.jpg" alt="rocket">          
+            <img src="../../img/rocket-placeholder.jpg" alt="rocket" width="50%">          
             <p>Which direction will Lewis choose to fly? Click an arrow.</p>
         </section>
+
+            <div>
+            <input type="image" id="left-arrow" src="../../img/left-arrow.png" width="20%"/>
+            </div
+
+            <div>
+            <input type="image" id="up-arrow" src="../../img/up-arrow.png" width="20%" />     
+            </div>
+
+            <div>
+            <input type="image" id="right-arrow" src="../../img/right-arrow.png" width="20%" />     
+            </div>
     `;
 };
 

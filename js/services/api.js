@@ -9,6 +9,17 @@ let ships = [{
     img: '../../img/ufo-placeholder.png'    
 }];
 
+let arrows = [{
+    name: 'left',
+    img: '../../img/left-arrow.png'
+}, {
+    name: 'right',
+    img: '../../img/right-arrow.png'
+}, {
+    name: 'up',
+    img: '../../img/up-arrow.png'
+}];
+
 let storyEvents = [{
     title: 'Space Pirates',
     text: 'story text',
