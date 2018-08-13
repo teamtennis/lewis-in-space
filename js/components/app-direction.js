@@ -9,17 +9,15 @@ let template = function() {
             <p>Which direction will Lewis choose to fly? Click an arrow.</p>
         </section>
 
-            <div>
-            <input type="image" id="left-arrow" src="../../img/left-arrow.png" width="20%"/>
-            </div
-
-            <div>
-            <input type="image" id="up-arrow" src="../../img/up-arrow.png" width="20%" />     
-            </div>
-
-            <div>
-            <input type="image" id="right-arrow" src="../../img/right-arrow.png" width="20%" />     
-            </div>
+            <a href="app-event.js">
+                <img src="../../img/left-arrow.png" width="20%" />   
+            
+            <a href="app-event.js">
+                <img src="../../img/up-arrow.png" width="20%" />     
+            
+            <a href="app-event.js">
+                <img src="../../img/right-arrow.png" width="20%" />        
+            
     `;
 };
 
