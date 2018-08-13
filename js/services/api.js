@@ -1,3 +1,8 @@
+export default{
+    getEvents: function() {
+        return storyEvents;
+    }
+};
 let userScore = 0;
 
 let ships = [{ 
