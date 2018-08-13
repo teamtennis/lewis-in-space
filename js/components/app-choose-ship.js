@@ -4,8 +4,10 @@ import html from '../html.js';
 
 let template = function() {
     return html`   
-        <section>           
-            <p>Hello choose ship!</p>
+        <section>
+            <img src="../../img/rocket-placeholder.jpg" alt="Lewis in Space">        
+            <p>Choose your ship:</p>
+            <div class="choose-ship"></div>
         </section>
     `;
 };

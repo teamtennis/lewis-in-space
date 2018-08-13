@@ -4,8 +4,9 @@ import html from '../html.js';
 
 let template = function() {
     return html`   
-        <section>           
-            <p>Hello direction!</p>
+        <section>
+            <img src="../../img/rocket-placeholder.jpg" alt="rocket">          
+            <p>Which direction will Lewis choose to fly? Click an arrow.</p>
         </section>
     `;
 };

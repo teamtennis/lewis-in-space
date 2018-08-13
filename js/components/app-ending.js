@@ -14,6 +14,13 @@ export default class EndingApp {
 
     render() {
         let dom = template();
+
+        // if (userScore > 0) {
+    
+        // } else {
+            
+        // }
+
         return dom;
     }
 }
