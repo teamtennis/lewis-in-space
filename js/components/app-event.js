@@ -1,6 +1,6 @@
 import html from '../html.js';
 import api from '../services/api.js';
-import Event from './event.js'
+import Event from './event.js';
 
 let template = function() {
     return html`   
@@ -25,7 +25,7 @@ export default class EventApp {
         let storyEvent = dom.querySelector('.story-event');
         
         let event = new Event ({
-            
+            storyEvent: this.storyEvents[0]            
         });
 
 
