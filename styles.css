@@ -43,7 +43,7 @@ body, html
   height: 100%;
   font-family: "Droid Sans", arial, verdana, sans-serif;
 	font-weight: 700;
-	color: #ff6;
+	color: #daa520;
 	background-color: #000;
 	overflow: hidden;
 }
@@ -160,6 +160,7 @@ h1 sub
 	-ms-transform: perspective(60vh) rotateX(25deg);
 	-o-transform: perspective(60vh) rotateX(25deg);
 	transform: perspective(60vh) rotateX(25deg);
+	text-shadow: 6px 6px black;
 }
 
 #titles:after
@@ -199,11 +200,11 @@ h1 sub
 {
 	position: absolute;
 	top: 100%;
-	-webkit-animation: scroll 200s linear 0s infinite;
-	-moz-animation: scroll 200s linear 0s infinite;
-	-ms-animation: scroll 200s linear 0s infinite;
-	-o-animation: scroll 200s linear 0s infinite;
-	animation: scroll 200s linear 0s infinite;
+	-webkit-animation: scroll 180s linear 0s infinite;
+	-moz-animation: scroll 180s linear 0s infinite;
+	-ms-animation: scroll 180s linear 0s infinite;
+	-o-animation: scroll 180s linear 0s infinite;
+	animation: scroll 180s linear 0s infinite;
 }
 
 /* animation */
