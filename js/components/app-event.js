@@ -24,8 +24,10 @@ export default class EventApp {
         let event = new Event ({
             storyEvent: this.storyEvents[0],  
             
-            onClick: () => {
-                console.log('app button clicked');
+            onClick: (button) => {
+                console.log('app button clicked', button);
+                
+        
             }
         });
 

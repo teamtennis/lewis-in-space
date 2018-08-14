@@ -29,7 +29,7 @@ export default class Event {
             this.onClick(button1);
             console.log('scoreChange', parseInt(button1.value));
         });
-        
+
         button2.addEventListener('click', () => {
             this.onClick(this.button2);
             this.onClick(button2);
