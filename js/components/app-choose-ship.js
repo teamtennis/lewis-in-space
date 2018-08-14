@@ -25,7 +25,7 @@ export default class ChooseShipApp {
         let dom = template();
         console.log('user:', this.user);
         let shipChoice = dom.querySelector('.ship-choices');
-        let userShip = this.user.userShip;
+        let user = this.user[0];
 
         for(var i = 0; i < this.ships.length; i++) {
             //console.log('this ship is a ', this.ships[i]);
@@ -36,8 +36,8 @@ export default class ChooseShipApp {
                 onSelect: (ship) => {
                     console.log('user on select', this.user);
                     console.log('ship on select', ship);
-                    this.user.userShip = '';
-                    this.user.userShip = ship.img;
+                    user.userShip = '';
+                    user.userShip = ship.img;
                     console.log('userShip', this.user.userShip);
                 }
             });
