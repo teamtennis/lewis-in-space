@@ -82,6 +82,7 @@ let storyEndings = [{
 }];
 
 export default {
+
     getEvents: function() {
         return storyEvents;
     },
@@ -89,5 +90,3 @@ export default {
     getUser: function() {
         return user;
     },
-
-};

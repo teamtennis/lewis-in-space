@@ -5,7 +5,7 @@ import api from '../services/api.js';
 let template = function() {
     return html`   
         <section>
-            <img src="../../img/rocket-placeholder.jpg" alt="rocket" width="50%">          
+            <img src="../../img/ufo.png" alt="rocket" width="40%">          
             <p>Which direction will Lewis choose to fly? Click an arrow.</p>
             <button type="reset" class="reset-path">Reset path history</button>
         </section>
@@ -17,7 +17,7 @@ let template = function() {
             <img src="../../img/up-arrow.png" width="20%" />     
             
             <a href="../../html/event.html" class="right-arrow">
-                <img src="../../img/right-arrow.png" width="20%" />    
+            <img src="../../img/right-arrow.png" width="20%" />    
     `;
 };
 
