@@ -52,10 +52,15 @@ export default class EventApp {
                 let lastItem = user.choices.length - 1;
                 let choiceResult = new ChoiceResult ({
                     result: user.choices[lastItem],
-                    storyEvent: this.storyEvents[eventIndex]
-                });
-                console.log('api result', choiceResult);
+                    storyEvent: this.storyEvents[eventIndex],
+                    choiceNumber: user.choices.length
+                });                   
+
                 resultArea.appendChild(choiceResult.render());
+               
+                
+
+                
             }
         });
     
