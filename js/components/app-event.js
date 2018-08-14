@@ -4,9 +4,6 @@ import Event from './event.js';
 
 let template = function() {
     return html`   
-        <section>           
-            <p>Hello event!</p>
-        </section>
         <section class="story-event">
            
         </section>
@@ -25,8 +22,13 @@ export default class EventApp {
         let storyEvent = dom.querySelector('.story-event');
         
         let event = new Event ({
-            storyEvent: this.storyEvents[0]            
+            storyEvent: this.storyEvents[0],  
+            
+            onClick: () => {
+                console.log('app button clicked');
+            }
         });
+
 
 
         storyEvent.appendChild(event.render());

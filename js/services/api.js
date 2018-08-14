@@ -15,6 +15,8 @@ let storyEvents = [{
     img: '../../img/event1-placeholder.jpg',  
     choice1: 'this is your first choice',
     choice2: 'this is your second choice',
+    choice1Result: 'this is what happens when you choose choice 1',
+    choice2Result: 'this is what happens when you choose choice 2',
     buttonText1: 'Pick me',
     buttonText2: 'No, pick me'
 }];
