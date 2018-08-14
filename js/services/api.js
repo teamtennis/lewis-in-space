@@ -35,5 +35,9 @@ let storyEndings = [{
 export default{
     getEvents: function() {
         return storyEvents;
+    },
+    
+    updateScore: function() {
+
     }
 };

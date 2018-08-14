@@ -25,7 +25,8 @@ export default class EventApp {
             storyEvent: this.storyEvents[0],  
             
             onClick: (button) => {
-                console.log('app button clicked', button);
+               
+                console.log('app button clicked', parseInt(button.value));
                 
         
             }
