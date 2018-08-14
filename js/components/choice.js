@@ -17,13 +17,11 @@ export default class Choice {
     }
 
     render() {
-        console.log('choice eventIndex', this.eventIndex);
         let eventIndex = this.eventIndex;
         let choice1 = 'choice' + [eventIndex] + 'a';
         let button1Selector = 'buttonText' + [eventIndex] + 'a';
         let choice2 = 'choice' + [eventIndex] + 'b';
         let button2Selector = 'buttonText' + [eventIndex] + 'b';
-        console.log('storyEvent',  this.storyEvent);
         let dom = template(this.storyEvent, eventIndex, choice1, choice2, button1Selector, button2Selector);
         let button1 = dom.querySelector('.choice1');
         let button2 = dom.querySelector('.choice2');
@@ -36,9 +34,6 @@ export default class Choice {
             this.onClick(button2);
         });
 
-
-        console.log('button1', button1.value);     
-        
         return dom;
     }
 }
