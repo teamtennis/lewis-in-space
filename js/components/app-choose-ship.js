@@ -1,6 +1,6 @@
 import html from '../html.js';
-// import api from '../services/api.js';
-// import Ship from '/ship.js'
+import api from '../services/api.js';
+import Ship from './ship.js';
 
 let template = function() {
     return html`   
@@ -9,19 +9,36 @@ let template = function() {
             <p>Choose your ship:</p>
             <div class="choose-ship"></div>
             
-            <a href="direction.html">
-                <img src="../../img/ufo.png" width="50%" />   
-
-            <a href="direction.html">
-                <img src="../../img/rocket-placeholder.jpg" width="30%" />  
+            <section class="ship-choices"></section>
+           
         </section>
     `;
 };
 
 export default class ChooseShipApp {
+    constructor() {
+        this.ships = api.getShips();
+        this.user = api.getUser();
+    }
 
     render() {
         let dom = template();
+        console.log('user:', this.user);
+        let shipChoice = dom.querySelector('.ship-choices');
+
+        for(var i = 0; i < this.ships.length; i++) {
+            //console.log('this ship is a ', this.ships[i]);
+            let ship = new Ship ({
+                ship: this.ships[i],
+    
+                onSelect: () => {
+                    console.log('image selected', this.ship.name);
+                }
+            });
+    
+            shipChoice.appendChild(ship.render());
+        }
+        
         return dom;
     }
 }

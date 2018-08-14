@@ -11,7 +11,8 @@ function createUser() {
     let data = [{
         score: 0,
         choices: [],
-        path: []
+        path: [],
+        shipChoice: ''
     }];
     return data;
 }
@@ -23,7 +24,7 @@ let ships = [{
     
 }, {
     name: 'ufo',
-    img: '../../img/ufo-placeholder.png'    
+    img: '../../img/ufo.png'    
 }];
 
 let arrows = [{
@@ -90,4 +91,8 @@ export default {
     getUser: function() {
         return user;
     },
-}
+
+    getShips: function() {
+        return ships;
+    },
+};
