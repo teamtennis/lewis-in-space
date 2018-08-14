@@ -2,7 +2,8 @@ import html from '/js/html.js';
 
 let template = function(ship) {
     return html`
-        <img class="ship-image" src="${ship[1].img}" width="50%">
+        <img class="ship-image" src="${ship.img}" width="20%">
+        
    `;
 };
 

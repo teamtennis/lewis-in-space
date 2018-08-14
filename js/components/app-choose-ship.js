@@ -9,15 +9,8 @@ let template = function() {
             <p>Choose your ship:</p>
             <div class="choose-ship"></div>
             
-            <section class="ship-choice-1"></section>
-            <section class="ship-choice-2"></section>
-            
-            
-            
-            <!-- <a href="direction.html">
-                <img src="../../img/ufo.png" width="50%" />   
-            <a href="direction.html">
-                <img src="../../img/rocket-placeholder.jpg" width="30%" />   -->
+            <section class="ship-choices"></section>
+           
         </section>
     `;
 };
@@ -30,19 +23,22 @@ export default class ChooseShipApp {
 
     render() {
         let dom = template();
-        let shipChoice1 = dom.querySelector('.ship-choice-1');
-        let shipChoice2 = dom.querySelector('.ship-choice-2');
-
-        let ship = new Ship ({
-            ship: this.ships
-
-            //onClick: (button) => {
-                
-            //}
-        });
-
-        shipChoice1.appendChild(ship.render());
-
+        console.log(this.ships);
+        let shipChoice = dom.querySelector('.ship-choices');
+        //make a loop, run through the array of ship, render each one one by one and append to shipchoice
+        for(var i = 0; i < this.ships.length; i++) {
+            console.log('this ship is a ', this.ships[i]);
+            let ship = new Ship ({
+                ship: this.ships[i]
+    
+                //onClick: (button) => {
+                    
+                //}
+            });
+    
+            shipChoice.appendChild(ship.render());
+        }
+        
         return dom;
     }
 }
