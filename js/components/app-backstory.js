@@ -4,7 +4,8 @@ import html from '../html.js';
 let template = function() {
     return html`   
         <section>           
-            <p>Hello backstory!</p>
+            <a href="../../html/choose-ship.html" class="begin-button">
+                <img src="../../img/beginbutton.png" width="20%"/>  
         </section>
     `;
 };

@@ -11,7 +11,7 @@
 }
 
 #backstory-root {
-    background-image: url("img/background-placeholder.jpg");
+    background-image: url("img/background.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -19,11 +19,9 @@
     background-position: center;
 }
 
-.start-game {
-	position: absolute;
-	bottom: 50;
-	left: 50;
-	color: white;
+.begin-button {
+	display: block;
+	text-align: center
 }
 
 .crew {
@@ -201,11 +199,11 @@ h1 sub
 {
 	position: absolute;
 	top: 100%;
-	-webkit-animation: scroll 100s linear 4s infinite;
-	-moz-animation: scroll 100s linear 4s infinite;
-	-ms-animation: scroll 100s linear 4s infinite;
-	-o-animation: scroll 100s linear 4s infinite;
-	animation: scroll 100s linear 4s infinite;
+	-webkit-animation: scroll 130s linear 0s infinite;
+	-moz-animation: scroll 130s linear 0s infinite;
+	-ms-animation: scroll 130s linear 0s infinite;
+	-o-animation: scroll 130s linear 0s infinite;
+	animation: scroll 130s linear 0s infinite;
 }
 
 /* animation */
