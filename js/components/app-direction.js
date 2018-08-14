@@ -23,20 +23,18 @@ let template = function() {
 
 export default class DirectionApp {
     constructor() {
-        this.userPath = api.userPath();
+        this.user = api.getUser();
     }
 
     render() {
         let dom = template();
-        let userPath = this.userPath;
+        let user = this.user[0];
         let upArrow = dom.querySelector('.up-arrow');
 
         upArrow.addEventListener('click', () => {
-            userPath.push(1);
-            console.log('user path', userPath);
+            user.path.push(0);
+            console.log('user path', user.path);
         });
-
-
 
         return dom;
     }

@@ -1,9 +1,21 @@
 import data from './data.js';
 
-let userScore = 0;
-let userChoices = [];
-let userPath = [];
+let user = data.user;
 
+if(!user) {
+    data.user = createUser();
+    user = data.user;
+}
+
+function createUser() {
+    let data = [{
+        score: 0,
+        choices: [],
+        path: []
+    }];
+    return data;
+}
+console.log('data', data);
 
 let ships = [{ 
     name: 'rocket',
@@ -74,15 +86,8 @@ export default {
         return storyEvents;
     },
     
-    userScore: function() {
-        return userScore;
+    getUser: function() {
+        return user;
     },
 
-    userChoices: function() {
-        return userChoices;
-    },
-
-    userPath: function() {
-        return userPath;
-    }
 };

@@ -15,9 +15,7 @@ let template = function() {
 export default class EventApp {
     constructor() {
         this.storyEvents = api.getEvents();
-        this.userScore = api.userScore();
-        this.userChoices = api.userChoices();
-        this.userPath = api.userPath();
+        this.user = api.getUser();
     }
 
     render() {
@@ -25,8 +23,9 @@ export default class EventApp {
         let storyEvent = dom.querySelector('.story-event');
         let choiceArea = dom.querySelector('.choice-area');
         let resultArea = dom.querySelector('.choice-result');
-        let userChoices = this.userChoices;
-        console.log('user path api', this.userPath);
+        let user = this.user[0];
+        console.log('user path api', user.path);
+        console.log('user.score', user.score);
 
         let event = new Event ({
             storyEvent: this.storyEvents[0]  
@@ -39,16 +38,19 @@ export default class EventApp {
                
                 let buttonValue = parseInt(button.value);
                 let buttonName = button.name;
-                this.userScore += buttonValue;
+                user.score += buttonValue;
                 choiceArea.style.display = 'none';
                 resultArea.style.display = 'block';
-                userChoices.push(buttonName);
+                user.choices.push(buttonName);
+                console.log('user[0]', user);
+                console.log('on click score', user.score);
 
-                let lastItem = userChoices.length - 1;
+                let lastItem = user.choices.length - 1;
                 let choiceResult = new ChoiceResult ({
-                    result: userChoices[lastItem],
+                    result: user.choices[lastItem],
                     storyEvent: this.storyEvents[0]
                 });
+                console.log('api result', choiceResult);
                 resultArea.appendChild(choiceResult.render());
             }
         });
