@@ -16,7 +16,8 @@ export default class Event {
     }
 
     render() {
-        let dom = template(this.storyEvent);  
+        console.log('event storyEvent', this.storyEvent);  
+        let dom = template(this.storyEvent)
         
         return dom;
     }
