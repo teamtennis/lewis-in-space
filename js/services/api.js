@@ -24,8 +24,8 @@ let storyEvents = [{
     title: 'Space Pirates',
     text: 'story text',
     img: '../../img/event1-placeholder.jpg',  
-    choice1: 'this is your first choice',
-    choice2: 'this is your second choice',
+    choice1a: 'this is your first choice',
+    choice1b: 'this is your second choice',
     choice1Result: 'this is what happens when you choose choice 1',
     choice2Result: 'this is what happens when you choose choice 2',
     buttonText1: 'Pick me',
@@ -39,8 +39,9 @@ let backstory = [{
 }];
 
 let storyEndings = [{
+    img: '../../img/good-planet-placeholder',
     status: 'you are home',
-    text: 'this is the story of your ending',
+    text: 'this is the story of your ending'
 }];
 
 export default{
@@ -48,7 +49,7 @@ export default{
         return storyEvents;
     },
     
-    updateScore: function() {
-
+    userScore: function() {
+        return userScore;
     }
 };

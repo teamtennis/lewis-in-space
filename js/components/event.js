@@ -6,10 +6,10 @@ let template = function(storyEvent) {
         <div>
             <h1>${storyEvent.title}</h1>
             <p>${storyEvent.text}</p>
-            <h2 class="event-choices">${storyEvent.choice1}</h2>
-            <button type="submit" value="1" class="event-choices choice1">${storyEvent.buttonText1}</button>
-            <h2 class="event-choices">${storyEvent.choice2}</h2>
-            <button type="submit" value="-1" class="event-choices choice2">${storyEvent.buttonText2}</button>
+            <h2 class="event-choices">${storyEvent.choice1a}</h2>
+            <button type="submit" value="1" name="choice1a" class="event-choices choice1">${storyEvent.buttonText1}</button>
+            <h2 class="event-choices">${storyEvent.choice1b}</h2>
+            <button type="submit" value="-1" name="choice1b" class="event-choices choice2">${storyEvent.buttonText2}</button>
         </div>
    `;
 };
@@ -24,6 +24,8 @@ export default class Event {
         let dom = template(this.storyEvent);
         let button1 = dom.querySelector('.choice1');
         let button2 = dom.querySelector('.choice2');
+
+      
         
         button1.addEventListener('click', () => {
             this.onClick(button1);
