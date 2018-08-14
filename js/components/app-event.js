@@ -41,16 +41,20 @@ export default class EventApp {
                 choiceArea.style.display = 'none';
                 resultArea.style.display = 'block';
                 userChoices.push(buttonName);
+
+                let lastItem = userChoices.length - 1;
+                let choiceResult = new ChoiceResult ({
+                    result: userChoices[lastItem],
+                    storyEvent: this.storyEvents[0]
+                });
+                resultArea.appendChild(choiceResult.render());
             }
         });
-
-        let choiceResult = new ChoiceResult ({
-            storyEvent:  this.storyEvents[0]
-        });
+    
+       
 
         storyEvent.appendChild(event.render());
         choiceArea.appendChild(choice.render());
-        resultArea.appendChild(choiceResult.render());
 
         return dom;
     }

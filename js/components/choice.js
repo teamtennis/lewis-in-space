@@ -3,9 +3,9 @@ import html from '/js/html.js';
 let template = function(storyEvent) {
     return html`
         <h2>${storyEvent.choice0a}</h2>
-        <button type="submit" value="1" name="choice0a" class="choice1">${storyEvent.buttonText0a}</button>
+        <button type="submit" value="1" name="choice0aResult" class="choice1">${storyEvent.buttonText0a}</button>
         <h2>${storyEvent.choice0b}</h2>
-        <button type="submit" value="-1" name="choice0b" class="choice2">${storyEvent.buttonText0b}</button>
+        <button type="submit" value="-1" name="choice0bResult" class="choice2">${storyEvent.buttonText0b}</button>
    `;
 };
 
