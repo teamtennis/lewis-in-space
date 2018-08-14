@@ -46,11 +46,13 @@ export default class EventApp {
                 user.choices.push(buttonName);
                 console.log('user[0]', user);
                 console.log('on click score', user.score);
+                console.log('on click user choices', user.choices);
+
 
                 let lastItem = user.choices.length - 1;
                 let choiceResult = new ChoiceResult ({
                     result: user.choices[lastItem],
-                    storyEvent: this.storyEvents[1]
+                    storyEvent: this.storyEvents[eventIndex]
                 });
                 console.log('api result', choiceResult);
                 resultArea.appendChild(choiceResult.render());

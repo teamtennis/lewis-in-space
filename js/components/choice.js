@@ -2,9 +2,9 @@ import html from '/js/html.js';
 
 let template = function(storyEvent, eventIndex, choice1, choice2, button1Selector, button2Selector) {
     return html`
-        <h2>${storyEvent[choice1]}</h2>
+        <p>${storyEvent[choice1]}</p>
         <button type="submit" value="1" name="choice${eventIndex}aResult" class="choice1">${storyEvent[button1Selector]}</button>
-        <h2>${storyEvent[choice2]}</h2>
+        <p>${storyEvent[choice2]}</p>
         <button type="submit" value="-1" name="choice${eventIndex}bResult" class="choice2">${storyEvent[button2Selector]}</button>
    `;
 };

@@ -15,9 +15,11 @@ export default class ChoiceResult {
 
     render() {
         let text = this.storyEvent[this.result];
-
+        console.log('result text', text);
         let dom = template(text);
         
         return dom;
     }
 }
+
+

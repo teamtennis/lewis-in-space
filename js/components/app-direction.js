@@ -17,7 +17,7 @@ let template = function() {
             <img src="../../img/up-arrow.png" width="20%" />     
             
             <a href="../../html/event.html" class="right-arrow">
-                <img src="../../img/right-arrow.png" width="20%" />      
+                <img src="../../img/right-arrow.png" width="20%" />    
     `;
 };
 
@@ -50,13 +50,9 @@ export default class DirectionApp {
         });
         leftArrow.addEventListener('click', () => {
             user.path.push(1);
-            leftArrow.style.display = 'none';
-            console.log('user path', user.path);
         });
         rightArrow.addEventListener('click', () => {
             user.path.push(2);
-            rightArrow.style.display = 'none';
-            console.log('user path', user.path);
         });
         resetPath.addEventListener('click', () => {
             user.path = [];
