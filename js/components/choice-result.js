@@ -10,7 +10,6 @@ let template = function() {
 export default class ChoiceResult {
     constructor(props) {
         this.storyEvent = props.storyEvent;
-        // this.continue = props.continue;
     }
 
     render() {

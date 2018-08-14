@@ -2,10 +2,10 @@ import html from '/js/html.js';
 
 let template = function(storyEvent) {
     return html`
-        <h2>${storyEvent.choice1a}</h2>
-        <button type="submit" value="1" name="choice1a" class="choice1">${storyEvent.buttonText1}</button>
-        <h2>${storyEvent.choice1b}</h2>
-        <button type="submit" value="-1" name="choice1b" class="choice2">${storyEvent.buttonText2}</button>
+        <h2>${storyEvent.choice0a}</h2>
+        <button type="submit" value="1" name="choice0a" class="choice1">${storyEvent.buttonText0a}</button>
+        <h2>${storyEvent.choice0b}</h2>
+        <button type="submit" value="-1" name="choice0b" class="choice2">${storyEvent.buttonText0b}</button>
    `;
 };
 
@@ -22,12 +22,10 @@ export default class Choice {
         
         button1.addEventListener('click', () => {
             this.onClick(button1);
-            console.log('scoreChange', parseInt(button1.value));
         });
 
         button2.addEventListener('click', () => {
             this.onClick(button2);
-            console.log('scoreChange', parseInt(button2.value));
         });
 
 

@@ -26,12 +26,12 @@ let storyEvents = [{
     title: 'Space Pirates',
     text: 'story text',
     img: '../../img/event1-placeholder.jpg',  
-    choice1a: 'this is your first choice',
-    choice1b: 'this is your second choice',
-    choice1Result: 'this is what happens when you choose choice 1',
-    choice2Result: 'this is what happens when you choose choice 2',
-    buttonText1: 'Pick me',
-    buttonText2: 'No, pick me'
+    choice0a: 'this is your first choice',
+    choice0b: 'this is your second choice',
+    buttonText0a: 'Pick me',
+    buttonText0b: 'No, pick me',
+    choice0aResult: 'this is what happens when you choose choice 1',
+    choice0bResult: 'this is what happens when you choose choice 2'
 }];
 
 let backstory = [{

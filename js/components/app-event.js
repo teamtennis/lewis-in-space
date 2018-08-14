@@ -23,12 +23,9 @@ export default class EventApp {
         let dom = template();
         let storyEvent = dom.querySelector('.story-event');
         let choiceArea = dom.querySelector('.choice-area');
-        let userScore = this.userScore;
-        let userChoices = this.userChoices;
         let resultArea = dom.querySelector('.choice-result');
-        console.log('user score', userScore);
-        console.log('story event', storyEvent);
-        
+        let userChoices = this.userChoices;
+
         let event = new Event ({
             storyEvent: this.storyEvents[0]  
         });
@@ -38,21 +35,12 @@ export default class EventApp {
 
             onClick: (button) => {
                
-                console.log('app button clicked', parseInt(button.value));
                 let buttonValue = parseInt(button.value);
                 let buttonName = button.name;
-                console.log('button name', buttonName);
-                if(buttonName === 'choice1a') {
-                    console.log('if button', buttonName);
-                    userScore += buttonValue;
-                    choiceArea.style.display = 'none';
-                    resultArea.style.display = 'block';
-                    userChoices.push(buttonName);
-                }
-                if(buttonName === 'choice1b') {
-                    console.log('if other button', buttonName);
-                }
-                console.log('new score', userScore);
+                this.userScore += buttonValue;
+                choiceArea.style.display = 'none';
+                resultArea.style.display = 'block';
+                userChoices.push(buttonName);
             }
         });
 
