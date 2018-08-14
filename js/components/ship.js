@@ -3,7 +3,7 @@ import html from '/js/html.js';
 let template = function(ship) {
     return html`
          <a href="../../html/direction.html" class="">
-            <img class="ship-image" src="${ship.img}" width="20%"> 
+            <img class="ship-image " src="${ship.img}" width="20%"> 
    `;
 };
 
@@ -15,12 +15,11 @@ export default class Ship {
 
     render() {
         let dom = template(this.ship);
-        console.log('what is ship', this.ship);
 
         let shipImage = dom.querySelector('.ship-image');
 
         shipImage.addEventListener('click', () => {
-            this.onSelect(shipImage);
+            this.onSelect(this.ship);
         });
         
 

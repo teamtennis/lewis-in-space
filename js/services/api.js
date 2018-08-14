@@ -12,7 +12,7 @@ function createUser() {
         score: 0,
         choices: [],
         path: [],
-        shipChoice: ''
+        userShip: ''
     }];
     return data;
 }
