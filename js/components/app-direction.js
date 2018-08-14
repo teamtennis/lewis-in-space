@@ -9,13 +9,13 @@ let template = function() {
             <p>Which direction will Lewis choose to fly? Click an arrow.</p>
         </section>
 
-            <a href="app-event.js">
-                <img src="../../img/left-arrow.png" width="20%" />   
+            <a href="../../html/event.html">
+            <img src="../../img/left-arrow.png" width="20%" />   
             
-            <a href="app-event.js">
-                <img src="../../img/up-arrow.png" width="20%" />     
+            <a href="../../html/event.html">
+            <img src="../../img/up-arrow.png" width="20%" />     
             
-            <a href="app-event.js">
+            <a href="../../html/event.html">
                 <img src="../../img/right-arrow.png" width="20%" />        
             
     `;
