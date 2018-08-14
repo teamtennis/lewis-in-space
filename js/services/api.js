@@ -1,4 +1,6 @@
 let userScore = 0;
+let userChoices = [];
+
 
 let ships = [{ 
     name: 'rocket',
@@ -51,5 +53,9 @@ export default{
     
     userScore: function() {
         return userScore;
+    },
+
+    userChoices: function() {
+        return userChoices;
     }
 };
