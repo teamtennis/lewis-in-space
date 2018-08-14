@@ -23,7 +23,7 @@ let ships = [{
     
 }, {
     name: 'ufo',
-    img: '../../img/ufo-placeholder.png'    
+    img: '../../img/ufo.png'    
 }];
 
 let arrows = [{
@@ -90,4 +90,8 @@ export default {
     getUser: function() {
         return user;
     },
-}
+
+    getShips: function() {
+        return ships;
+    },
+};
