@@ -40,3 +40,4 @@ let storyEndings = [{
     status: 'you are home',
     text: 'this is the story of your ending',
 }];
+
