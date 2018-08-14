@@ -90,3 +90,4 @@ export default {
     getUser: function() {
         return user;
     },
+}
