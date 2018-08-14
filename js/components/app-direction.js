@@ -1,5 +1,5 @@
 import html from '../html.js';
-// import api from '../services/api.js';
+import api from '../services/api.js';
 // import Ship from '/ship.js'
 
 let template = function() {
@@ -12,7 +12,7 @@ let template = function() {
             <a href="../../html/event.html">
             <img src="../../img/left-arrow.png" width="20%" />   
             
-            <a href="../../html/event.html">
+            <a href="../../html/event.html" class="up-arrow">
             <img src="../../img/up-arrow.png" width="20%" />     
             
             <a href="../../html/event.html">
@@ -22,9 +22,22 @@ let template = function() {
 };
 
 export default class DirectionApp {
+    constructor() {
+        this.userPath = api.userPath();
+    }
 
     render() {
         let dom = template();
+        let userPath = this.userPath;
+        let upArrow = dom.querySelector('.up-arrow');
+
+        upArrow.addEventListener('click', () => {
+            userPath.push(1);
+            console.log('user path', userPath);
+        });
+
+
+
         return dom;
     }
 }

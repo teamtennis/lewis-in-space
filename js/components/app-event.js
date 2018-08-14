@@ -17,6 +17,7 @@ export default class EventApp {
         this.storyEvents = api.getEvents();
         this.userScore = api.userScore();
         this.userChoices = api.userChoices();
+        this.userPath = api.userPath();
     }
 
     render() {
@@ -25,6 +26,7 @@ export default class EventApp {
         let choiceArea = dom.querySelector('.choice-area');
         let resultArea = dom.querySelector('.choice-result');
         let userChoices = this.userChoices;
+        console.log('user path api', this.userPath);
 
         let event = new Event ({
             storyEvent: this.storyEvents[0]  
