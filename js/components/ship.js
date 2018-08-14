@@ -10,13 +10,18 @@ let template = function(ship) {
 export default class Ship {
     constructor(props) {
         this.ship = props.ship;
-        this.onClick = props.onClick;
+        this.onSelect = props.onSelect;
     }
 
     render() {
         let dom = template(this.ship);
         console.log('what is ship', this.ship);
 
+        let shipImage = dom.querySelector('.ship-image');
+
+        shipImage.addEventListener('click', () => {
+            this.onSelect(shipImage);
+        });
         
 
         return dom;

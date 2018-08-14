@@ -23,17 +23,17 @@ export default class ChooseShipApp {
 
     render() {
         let dom = template();
-        console.log(this.ships);
+        console.log('user:', this.user);
         let shipChoice = dom.querySelector('.ship-choices');
 
         for(var i = 0; i < this.ships.length; i++) {
-            console.log('this ship is a ', this.ships[i]);
+            //console.log('this ship is a ', this.ships[i]);
             let ship = new Ship ({
-                ship: this.ships[i]
+                ship: this.ships[i],
     
-                //onClick: (button) => {
-                    
-                //}
+                onSelect: () => {
+                    console.log('image selected', this.ship.name);
+                }
             });
     
             shipChoice.appendChild(ship.render());

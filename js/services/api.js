@@ -11,7 +11,8 @@ function createUser() {
     let data = [{
         score: 0,
         choices: [],
-        path: []
+        path: [],
+        shipChoice: ''
     }];
     return data;
 }
