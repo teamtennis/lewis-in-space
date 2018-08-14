@@ -24,18 +24,19 @@ export default class EventApp {
         let choiceArea = dom.querySelector('.choice-area');
         let resultArea = dom.querySelector('.choice-result');
         let user = this.user[0];
+        let eventIndex = user.path.length - 1;
         console.log('user path api', user.path);
         console.log('user.score', user.score);
-
+        
         let event = new Event ({
-            storyEvent: this.storyEvents[0]  
+            storyEvent: this.storyEvents[eventIndex]  
         });
-
+        
         let choice = new Choice ({
-            storyEvent:  this.storyEvents[0],
-
-            onClick: (button) => {
-               
+            storyEvent:  this.storyEvents[eventIndex],
+            eventIndex: eventIndex,
+            
+            onClick: (button) => {                
                 let buttonValue = parseInt(button.value);
                 let buttonName = button.name;
                 user.score += buttonValue;
@@ -48,7 +49,7 @@ export default class EventApp {
                 let lastItem = user.choices.length - 1;
                 let choiceResult = new ChoiceResult ({
                     result: user.choices[lastItem],
-                    storyEvent: this.storyEvents[0]
+                    storyEvent: this.storyEvents[1]
                 });
                 console.log('api result', choiceResult);
                 resultArea.appendChild(choiceResult.render());
