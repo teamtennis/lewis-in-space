@@ -7,7 +7,7 @@ let template = function() {
     return html`   
         <section class="story-event"></section>
         <section class="choice-area"></section>
-        
+        <section class="choice-result"></section> 
     `;
 };
 
@@ -21,10 +21,9 @@ export default class EventApp {
     render() {
         let dom = template();
         let storyEvent = dom.querySelector('.story-event');
-        let choiceArea = dom.querySelector('.choice-area');
+        // let choiceArea = dom.querySelector('.choice-area');
         let userScore = this.userScore;
-        let choicesArea = dom.querySelector('.choices-area');
-        console.log('choices area', choicesArea);
+        let resultArea = dom.querySelector('.choice-result');
         console.log('user score', userScore);
         console.log('story event', storyEvent);
         
@@ -40,7 +39,7 @@ export default class EventApp {
                 if(buttonName === 'choice1a') {
                     console.log('if button', buttonName);
                     userScore += buttonValue;
-                    // choicesArea.style.display = 'none';
+                    resultArea.style.display = 'block';
                     
                 }
                 if(buttonName === 'choice1b') {
@@ -51,11 +50,15 @@ export default class EventApp {
         });
 
         let choiceResult = new ChoiceResult ({
+            storyEvent:  this.storyEvents[0],
 
+            onClick: (button) => {
+                
+            }
         });
 
         storyEvent.appendChild(event.render());
-        choiceArea.appendChild(choiceResult.render());
+        resultArea.appendChild(choiceResult.render());
 
         return dom;
     }

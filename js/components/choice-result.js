@@ -3,13 +3,13 @@ import html from '/js/html.js';
 let template = function() {
     return html`
         <p>This is a choice result</p>
-        <button type="submit">Continue</button>
+        <a class="button" href="../../html/direction.html">Continue</a>
    `;
 };
 
 export default class ChoiceResult {
-    constructor() {
-        // this.storyEvent = props.storyEvent;
+    constructor(props) {
+        this.storyEvent = props.storyEvent;
         // this.continue = props.continue;
     }
 
