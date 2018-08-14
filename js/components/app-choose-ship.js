@@ -25,7 +25,7 @@ export default class ChooseShipApp {
         let dom = template();
         console.log(this.ships);
         let shipChoice = dom.querySelector('.ship-choices');
-        //make a loop, run through the array of ship, render each one one by one and append to shipchoice
+
         for(var i = 0; i < this.ships.length; i++) {
             console.log('this ship is a ', this.ships[i]);
             let ship = new Ship ({
