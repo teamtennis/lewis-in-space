@@ -21,7 +21,7 @@ console.log('data', data);
 
 let ships = [{ 
     name: 'rocket',
-    img: '../../img/rocket-placeholder.jpg'    
+    img: '../../img/rocket.png'    
     
 }, {
     name: 'ufo',

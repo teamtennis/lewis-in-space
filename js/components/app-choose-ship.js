@@ -6,17 +6,10 @@ let template = function() {
     return html`   
         <section> 
             <div class="ship-grid">
-                <div>1</div>
-                <div>2 <img src="../../img/lewis-logo.png"class="lewis-logo"></div>
-                <div class="choose-ship">3 <p>Choose your ship:</p></div>
-                <div class="ship-choices">4</div>
-                <div>5</div>
-                
-                
-                  
-
-
-            <section></section>
+                <img src="../../img/lewis-logo.png"class="lewis-logo">
+                <p class="choose-ship">Choose your ship:</p>
+                <div class="ship-choices"></div>
+            </div>
            
         </section>
     `;
