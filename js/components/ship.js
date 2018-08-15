@@ -2,8 +2,9 @@ import html from '/js/html.js';
 
 let template = function(ship) {
     return html`
-         <a href="../../html/direction.html" class="">
-            <img class="ship-image " src="${ship.img}" width="20%"> 
+         <a href="../../html/direction.html" class="ship-link">
+            <img class="ship-image" src="${ship.img}"> 
+        </a>
    `;
 };
 
