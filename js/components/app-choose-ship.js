@@ -20,7 +20,9 @@ let template = function() {
                 <div>11</div>
                 <div>12</div>
                 <div>13</div>
-                <div>14</div>
+                <div class="choose-ship">14
+                    <p>Choose your ship:</p>
+                </div>
                 <div>15</div>
                 <div>16</div>
                 <div>17</div>
@@ -34,10 +36,7 @@ let template = function() {
                   
 
 
-            <p>Choose your ship:</p>
-            <div class="choose-ship"></div>
-            
-            <section ></section>
+            <section></section>
            
         </section>
     `;

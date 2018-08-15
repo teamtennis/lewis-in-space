@@ -15,8 +15,10 @@
 }
 .ship-grid{
 	display: grid;
-	grid-template-columns: 4fr 4fr 4fr 4fr;
-	grid-template-rows: 2fr 6fr 2fr 2fr 2fr 2fr;
+	width: 100vw;
+    height: 100vh;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 4fr .5fr 1fr 2fr 1fr;
 }
 
 #choose-ship-root {
