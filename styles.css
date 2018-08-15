@@ -10,8 +10,18 @@
     display: none;
 }
 
+#choose-ship-root {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+	
+}
+
 #backstory-root {
-    background-image: url("img/background-placeholder.jpg");
+    background-image: url("img/backstory-background.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -19,11 +29,16 @@
     background-position: center;
 }
 
-.start-game {
+.lewis-logo {
 	position: absolute;
-	bottom: 50;
-	left: 50;
-	color: white;
+    top: 0; bottom:0; left: 0; right:0;
+	margin: auto;
+	width: 40%
+}
+
+.begin-button {
+	display: block;
+	text-align: center
 }
 
 .crew {
@@ -45,7 +60,7 @@ body, html
   height: 100%;
   font-family: "Droid Sans", arial, verdana, sans-serif;
 	font-weight: 700;
-	color: #ff6;
+	color: #daa520;
 	background-color: #000;
 	overflow: hidden;
 }
@@ -157,11 +172,12 @@ h1 sub
 	-ms-transform-origin: 50% 100%;
 	-o-transform-origin: 50% 100%;
 	transform-origin: 50% 100%;
-	-webkit-transform: perspective(30vh) rotateX(25deg);
-	-moz-transform: perspective(30vh) rotateX(25deg);
-	-ms-transform: perspective(30vh) rotateX(25deg);
-	-o-transform: perspective(30vh) rotateX(25deg);
-	transform: perspective(30vh) rotateX(25deg);
+	-webkit-transform: perspective(50vh) rotateX(25deg);
+	-moz-transform: perspective(50vh) rotateX(25deg);
+	-ms-transform: perspective(50vh) rotateX(25deg);
+	-o-transform: perspective(50vh) rotateX(25deg);
+	transform: perspective(50vh) rotateX(25deg);
+	text-shadow: 6px 6px black;
 }
 
 #titles:after
@@ -201,11 +217,11 @@ h1 sub
 {
 	position: absolute;
 	top: 100%;
-	-webkit-animation: scroll 100s linear 4s infinite;
-	-moz-animation: scroll 100s linear 4s infinite;
-	-ms-animation: scroll 100s linear 4s infinite;
-	-o-animation: scroll 100s linear 4s infinite;
-	animation: scroll 100s linear 4s infinite;
+	-webkit-animation: scroll 180s linear 0s infinite;
+	-moz-animation: scroll 180s linear 0s infinite;
+	-ms-animation: scroll 180s linear 0s infinite;
+	-o-animation: scroll 180s linear 0s infinite;
+	animation: scroll 180s linear 0s infinite;
 }
 
 /* animation */
