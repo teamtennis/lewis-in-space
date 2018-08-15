@@ -41,27 +41,27 @@ let arrows = [{
 
 let storyEvents = [{
     title: 'Slime Pirates',
-    text: 'You fell asleep at the controls and drifted off course. You wake abruptly, salivating, to the sound of a proximity warning. You check your radar and are horrified to see that the slime pirates have found you and they are closing in fast.',
+    text: 'You fell asleep at the controls and drifted off course. You wake abruptly, salivating, to the sound of a warning bell. You check your radar and are horrified to see a slime pirate ship has found you and it is closing in fast. You start up your engine, preparing to flee. Your space ship is low on snack fuel and as soon as you run out, the slime pirates will catch you, steal your ship, and turn you into a slime dog.',
     img: '../../img/event1-placeholder.jpg',  
-    choice0a: 'this is your first pirate choice',
-    choice0b: 'this is your second pirate choice',
-    buttonText0a: 'Pick me',
-    buttonText0b: 'No, pick me',
-    choice0aResult: 'choice 0a results text',
-    choice0bResult: 'choice 0b results text'
+    choice0a: 'You flee into a nearby asteroid field where you hope you can outmaneuver or hide from the slime pirates.',
+    choice0b: 'Remembering your promise to always come home to Princess Megan Organa, and knowing there is very little hope of escaping with the fuel you have left, you make a difficult decision: you hail the pirate ship and tell them about a nearby cruise ship full of rich creatures they could raid instead.',
+    buttonText0a: 'Choice A',
+    buttonText0b: 'Choice B',
+    choice0aResult: 'The slime pirated followed you into the asteroid field. During the chase, the slime pirates\' ship sustained damage in an in an asteroid collision and turned back. As you passed out of the asteroid field, you ran out of fuel and drifted through space until a passing cargo ship picked your ship up.',
+    choice0bResult: 'The slime pirates thank you for telling them about the cruise ship, but they want to take your ship and turn you into a slime dog anyway. Lucky for you, the cruise ship changes course and the pirates only have time to raid one of you. They chase the cruise ship, leaving you with enough fuel to continue your journey. You convince yourself that the cruise ship\'s security team will prevent the slime pirates from hurting any passengers.'
 }, {
     title: 'Distress Signal from Furtuna9',
-    text: 'While trying to pass unnoticed through the cat-space, where no dogs are allowed, you receive a distress signal from the cat planet Furtuna9. An asteroid big enough to destroy a major city is heading straight toward their planet, and you are the only ship close enough to take action to divert it. What do you choose to do?',
+    text: 'While trying to pass unnoticed through the cat-space, where no dogs are allowed, you receive a distress signal from the cat planet Furtuna9. An asteroid big enough to destroy a major city is heading straight toward their planet, and you are the only ship close enough to take action to divert it.',
     img: '../../img/event2-placeholder.jpg',  
-    choice1a: 'You risk your life, ship, and use up most of the snack fuel you need to power your ship in an attempt to prevent a cat-aststrophe. You change your heading to intercept the asteroid and plan to use your ship to nudge it onto a different course',
-    choice1b: 'You have no weapons, a ship barely big enough for a dog, and and limited snack fuel. Even if you could get to the asteroid in time, you could easily run out of fuel and never make it home to Planet Alchemy where you have friends and family waiting for you. With some reluctance, you continue on your journey as if you never heard the distress signal',
+    choice1a: 'You risk your life, ship, and use up most of the snack fuel you need to continue your travels in an attempt to prevent a cat-aststrophe. You change your heading to intercept the asteroid and plan to use your ship to nudge it onto a different course',
+    choice1b: 'You have no weapons, a ship barely big enough for a dog, and have limited snack fuel. Even if you could get to the asteroid in time, you could easily run out of fuel and never make it home to Planet Alchemy where you have friends and family waiting for you. With some reluctance, you continue on your journey as if you never heard the distress signal',
     buttonText1a: 'Choice A',
     buttonText1b: 'Choice B',
     choice1aResult: 'Your outrageous, brave plan to save Furtuna9 worked! A small nudge from your ship changed the course of the asteroid enough that it missed the cat planet. Unfortunately, you\'ve used up most of your snack fuel and are at risk of becoming stranded in space. You have to make a stop and take some risks to get more fuel.',
-    choice1bResult: 'By the time the asteroid strikes Furtuna9, you are about to cross our of cat-space with plenty of snack fuel to continue your journey. You can\'t see the impact and the planet is just a dot in the distance. You put it out of your mind, but you\'ve changed.'
+    choice1bResult: 'By the time the asteroid strikes Furtuna9, you are about to cross out of cat-space with plenty of snack fuel to continue your journey. You can\'t see the impact and the planet is just a dot in the distance. You put it out of your mind, but you\'ve changed.'
 }, {
-    title: 'Some Other Story',
-    text: 'some other story text',
+    title: 'Emperor Journey',
+    text: '',
     img: '../../img/event3-placeholder.jpg',  
     choice2a: 'this is your first other choice',
     choice2b: 'this is your second other choice',
