@@ -1,18 +1,22 @@
 import html from '../html.js';
 
-let template = function() {
-   return html`
+let template = function(image) {
+    return html`
+        <p>Hello Ending!</p>
+        <img src="${image}">
         
+  
    `;
 };
 
-export default class EndingApp {
-   constructor(props) {
-       
-   }
+export default class Ending {
+    constructor(props) {
+        this.ending = props.ending;       
+    }
 
-   render() {
-       let dom = template();
-       return dom;
-   }
+    render() {
+        let endingImage = this.ending.img;
+        let dom = template(endingImage);
+        return dom;
+    }
 }

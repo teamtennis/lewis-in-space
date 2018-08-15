@@ -77,9 +77,13 @@ let backstory = [{
 }];
 
 let storyEndings = [{
-    img: '../../img/good-planet-placeholder',
+    img: '../../img/good-planet-placeholder.jpg',
     status: 'you are home',
-    text: 'this is the story of your ending'
+    text: 'this is the story of your good ending'
+}, {
+    img: '../../img/bad-planet-placeholder.jpg',
+    status: 'you are a bad bad doggo',
+    text: 'this is the story of your bad ending'
 }];
 
 export default {
@@ -95,4 +99,9 @@ export default {
     getShips: function() {
         return ships;
     },
+
+    getEndings: function() {
+        return storyEndings;
+    }
+
 };
