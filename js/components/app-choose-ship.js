@@ -4,12 +4,39 @@ import Ship from './ship.js';
 
 let template = function() {
     return html`   
-        <section>
-            <img src="../../img/lewis-logo.png"class="lewis-logo">        
-            <p>Choose your ship:</p>
-            <div class="choose-ship"></div>
-            
-            <section class="ship-choices"></section>
+        <section> 
+            <div class="ship-grid">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6 <img src="../../img/lewis-logo.png"class="lewis-logo">        
+</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div class="choose-ship">14
+                    <p>Choose your ship:</p>
+                </div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+                <div class="ship-choices">18 </div>
+                <div >19</div>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div>23</div>
+                <div>24</div>
+                  
+
+
+            <section></section>
            
         </section>
     `;
