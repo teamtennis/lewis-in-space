@@ -2,10 +2,10 @@ import html from '../html.js';
 import api from '../services/api.js';
 // import Ship from '/ship.js'
 
-let template = function() {
+let template = function(user) {
     return html`   
         <section>
-            <img src="../../img/ufo.png" alt="rocket" width="40%">          
+            <img src="${user.userShip}" alt="rocket" width="40%">          
             <p>Which direction will Lewis choose to fly? Click an arrow.</p>
             <button type="reset" class="reset-path">Reset path history</button>
         </section>
@@ -27,8 +27,9 @@ export default class DirectionApp {
     }
 
     render() {
-        let dom = template();
         let user = this.user[0];
+        console.log(user);
+        let dom = template(user);
         let upArrow = dom.querySelector('.up-arrow');
         let leftArrow = dom.querySelector('.left-arrow');
         let rightArrow = dom.querySelector('.right-arrow');
