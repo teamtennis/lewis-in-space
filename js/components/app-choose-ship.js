@@ -29,6 +29,7 @@ export default class ChooseShipApp {
             user.choices = [];
             user.path = [];
             user.userShip = '';
+            user.mirror = [];
         });
 
         let dom = template();

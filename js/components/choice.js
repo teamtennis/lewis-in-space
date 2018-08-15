@@ -14,6 +14,7 @@ export default class Choice {
         this.storyEvent = props.storyEvent;
         this.onClick = props.onClick;
         this.eventIndex = props.eventIndex;
+        this.mirror = props.mirror;
     }
 
     render() {
@@ -32,6 +33,8 @@ export default class Choice {
 
         button2.addEventListener('click', () => {
             this.onClick(button2);
+            this.mirror.push(eventIndex);
+            console.log('choice mirror', this.mirror);
         });
 
         return dom;

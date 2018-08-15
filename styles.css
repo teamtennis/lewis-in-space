@@ -51,7 +51,11 @@
 .game-results,
 .start-over-button,
 .dark-influence-button,
-.get-fuel-button {
+.get-fuel-button,
+.ending-button,
+.pirate,
+.evil,
+.darth {
 	display: none;
 }
 /* 
