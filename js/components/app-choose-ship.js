@@ -11,7 +11,8 @@ let template = function() {
                 <div>3</div>
                 <div>4</div>
                 <div>5</div>
-                <div>6</div>
+                <div>6 <img src="../../img/lewis-logo.png"class="lewis-logo">        
+</div>
                 <div>7</div>
                 <div>8</div>
                 <div>9</div>
@@ -23,21 +24,20 @@ let template = function() {
                 <div>15</div>
                 <div>16</div>
                 <div>17</div>
-                <div>18</div>
-                <div>19</div>
+                <div class="ship-choices">18 </div>
+                <div >19</div>
                 <div>20</div>
                 <div>21</div>
                 <div>22</div>
                 <div>23</div>
                 <div>24</div>
-            </div>
-<img src="../../img/lewis-logo.png"class="lewis-logo">        
+                  
 
 
             <p>Choose your ship:</p>
             <div class="choose-ship"></div>
             
-            <section class="ship-choices"></section>
+            <section ></section>
            
         </section>
     `;
