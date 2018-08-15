@@ -10,13 +10,30 @@
     display: none;
 }
 
+#choose-ship-root {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+	
+}
+
 #backstory-root {
-    background-image: url("img/background.jpg");
+    background-image: url("img/backstory-background.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.lewis-logo {
+	position: absolute;
+    top: 0; bottom:0; left: 0; right:0;
+	margin: auto;
+	width: 40%
 }
 
 .begin-button {

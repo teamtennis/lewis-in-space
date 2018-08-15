@@ -5,7 +5,7 @@ import Ship from './ship.js';
 let template = function() {
     return html`   
         <section>
-            <img src="../../img/lewis-logo.png" width="40%" alt="Lewis in Space">        
+            <img src="../../img/lewis-logo.png"class="lewis-logo">        
             <p>Choose your ship:</p>
             <div class="choose-ship"></div>
             
