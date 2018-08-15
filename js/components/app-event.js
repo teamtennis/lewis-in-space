@@ -26,8 +26,6 @@ export default class EventApp {
         let user = this.user[0];
         let lastItemPath = user.path.length - 1;
         let eventIndex = user.path[lastItemPath];
-        console.log('user path api', user.path);
-        console.log('user.score', user.score);
         
         let event = new Event ({
             storyEvent: this.storyEvents[eventIndex]  
@@ -40,14 +38,11 @@ export default class EventApp {
             onClick: (button) => {                
                 let buttonValue = parseInt(button.value);
                 let buttonName = button.name;
+                
                 user.score += buttonValue;
                 choiceArea.style.display = 'none';
                 resultArea.style.display = 'block';
                 user.choices.push(buttonName);
-                console.log('user[0]', user);
-                console.log('on click score', user.score);
-                console.log('on click user choices', user.choices);
-
 
                 let lastItem = user.choices.length - 1;
                 let choiceResult = new ChoiceResult ({
@@ -57,14 +52,8 @@ export default class EventApp {
                 });                   
 
                 resultArea.appendChild(choiceResult.render());
-               
-                
-
-                
             }
         });
-    
-       
 
         storyEvent.appendChild(event.render());
         choiceArea.appendChild(choice.render());

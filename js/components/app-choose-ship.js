@@ -23,29 +23,25 @@ export default class ChooseShipApp {
 
     render() {
         let user = this.user[0];
+        
         window.addEventListener('load', () => {
             user.score = 0;
             user.choices = [];
             user.path = [];
             user.userShip = '';
         });
+
         let dom = template();
-        console.log('user:', this.user);
         let shipChoice = dom.querySelector('.ship-choices');
-        
 
         for(var i = 0; i < this.ships.length; i++) {
-            //console.log('this ship is a ', this.ships[i]);
             let ship = new Ship ({
                 ship: this.ships[i],
                 user: this.user,
                 
                 onSelect: (ship) => {
-                    console.log('user on select', this.user);
-                    console.log('ship on select', ship);
                     user.userShip = '';
                     user.userShip = ship.img;
-                    console.log('userShip', this.user.userShip);
                 }
             });
     
