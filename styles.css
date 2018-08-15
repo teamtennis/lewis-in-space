@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
+*  {
+	border: 1px red solid	
+}
 * { padding: 0; margin: 0; }
+
 
 .event-image {
     height: 300px;
@@ -8,6 +12,11 @@
 
 .choice-result {
     display: none;
+}
+.ship-grid{
+	display: grid;
+	grid-template-columns: 4fr 4fr 4fr 4fr;
+	grid-template-rows: 2fr 6fr 2fr 2fr 2fr 2fr;
 }
 
 #choose-ship-root {
@@ -21,6 +30,7 @@
 }
 
 #backstory-root {
+	
     background-image: url("img/backstory-background.jpg");
     background-size: cover;
     width: 100vw;
@@ -30,7 +40,7 @@
 }
 
 .lewis-logo {
-	position: absolute;
+	/* position: absolute; */
     top: 0; bottom:0; left: 0; right:0;
 	margin: auto;
 	width: 40%
