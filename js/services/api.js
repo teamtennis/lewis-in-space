@@ -54,8 +54,8 @@ let storyEvents = [{
     img: '../../img/event3-placeholder.jpg',  
     choice2a: 'Fluffy is one of your best friends, and it breaks your heart to see her so frail and weak. You leave her with all of the snacks you can spare to help her heal and get back on her big feet.',
     choice2b: 'Everyone needs a little help sometimes so you give Fluffy just enough snacks fuel a one way trip to the nearest space station. She can get a job and earn her own way there. Give a Wampa a snack, feed her for a day, but teach a Wampa to get snacks, she feeds herself without taking from her friends.',
-    buttonText1a: 'Choice A',
-    buttonText1b: 'Choice B',
+    buttonText2a: 'Choice A',
+    buttonText2b: 'Choice B',
     choice2aResult: 'You fly away from Algid after a long, pleasant visit during which you and Fluffy always stayed an appropriate distance apart. You are a little concerned about your own snack fuel levels, but you feel good about helping your friend and know she would have done the same for you.',
     choice2bResult: 'You fly away from Algid after a short, pleasant visit. You were clear about your boundaries, and that\'s important in a friendship, right? You hope Fluffy does the right thing, using those snacks to find work rather than binge eating them.'
 }];
