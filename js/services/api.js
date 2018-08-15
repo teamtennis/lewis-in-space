@@ -28,17 +28,6 @@ let ships = [{
     img: '../../img/ufo.png'    
 }];
 
-let arrows = [{
-    name: 'left',
-    img: '../../img/left-arrow.png'
-}, {
-    name: 'right',
-    img: '../../img/right-arrow.png'
-}, {
-    name: 'up',
-    img: '../../img/up-arrow.png'
-}];
-
 let storyEvents = [{
     title: 'Slime Pirates',
     text: 'You fell asleep at the controls and drifted off course. You wake abruptly, salivating, to the sound of a warning bell. You check your radar and are horrified to see a slime pirate ship has found you and it is closing in fast. You start up your engine, preparing to flee. Your space ship is low on snack fuel and as soon as you run out, the slime pirates will catch you, steal your ship, and turn you into a slime dog.',
@@ -61,7 +50,7 @@ let storyEvents = [{
     choice1bResult: 'By the time the asteroid strikes Furtuna9, you are about to cross out of cat-space with plenty of snack fuel to continue your journey. You can\'t see the impact and the planet is just a dot in the distance. You put it out of your mind, but you\'ve changed.'
 }, {
     title: 'Visit to the Ice Moon',
-    text: 'You are so happy when you notice you\'re nearing the ice moon Algid, where your good friend Fluffy the Wampa lives. Although some think you two make an odd pair, you have a surprising amount in common. For instance, you are both very protective of your personal space. You decide to surprise her with a visit. You land and your friend comes out to greet you, but when you give her a big hug (with your eyes) you notice how thin she is. Fluffy reluctantly admits that she\'s been out of snacks for weeks, which means no food and no fuel to go get more food.'
+    text: 'You are so happy when you notice you\'re nearing the ice moon Algid, where your good friend Fluffy the Wampa lives. Although some think you two make an odd pair, you have a surprising amount in common. For instance, you are both very protective of your personal space. You decide to surprise her with a visit. You land and your friend comes out to greet you, but when you give her a big hug (with your eyes) you notice how thin she is. Fluffy reluctantly admits that she\'s been out of snacks for weeks, which means no food and no fuel to go get more food.',
     img: '../../img/event3-placeholder.jpg',  
     choice2a: 'Fluffy is one of your best friends, and it breaks your heart to see her so frail and weak. You leave her with all of the snacks you can spare to help her heal and get back on her big feet.',
     choice2b: 'Everyone needs a little help sometimes so you give Fluffy just enough snacks fuel a one way trip to the nearest space station. She can get a job and earn her own way there. Give a Wampa a snack, feed her for a day, but teach a Wampa to get snacks, she feeds herself without taking from her friends.',
