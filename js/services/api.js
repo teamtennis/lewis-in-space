@@ -50,13 +50,13 @@ let storyEvents = [{
     choice0aResult: 'choice 0a results text',
     choice0bResult: 'choice 0b results text'
 }, {
-    title: 'Asteroid',
-    text: 'asteroid story text',
+    title: 'Distress Signal from Furtuna9',
+    text: 'While trying to pass unnoticed through the cat-space, where no dogs are allowed, Lewis receives a distress signal from the cat planet Furtuna9. An asteroid big enough to destroy a major city is heading straight toward their planet, and you are the only ship close enough to take action to divert it. What do you choose to do?',
     img: '../../img/event2-placeholder.jpg',  
-    choice1a: 'this is your first asteroid choice',
-    choice1b: 'this is your second asteroid choice',
-    buttonText1a: 'I am the one',
-    buttonText1b: 'But I am the two',
+    choice1a: 'You risk your life, ship, and use up most of the snack fuel you need to power your ship in an attempt to prevent a cat-aststrophe. You change your heading to intercept the asteroid and plan to use your ship to nudge it onto a different course',
+    choice1b: 'You have no weapons, a ship barely big enough for a dog, and and limited snack fuel. Even if you could get to the asteroid in time, you could easily run out of fuel and never make it home to Planet Alchemy where you have friends and family waiting for you. With some reluctance, you continue on your journey as if you never heard the distress signal',
+    buttonText1a: 'Choice A',
+    buttonText1b: 'Choice B',
     choice1aResult: 'choice 1a results text',
     choice1bResult: 'choice 1b results text'
 }, {
@@ -85,6 +85,10 @@ let storyEndings = [{
     img: '../../img/bad-planet-placeholder.jpg',
     status: 'you are a bad bad doggo',
     text: 'this is the story of your bad ending'
+}, {
+    img: '../../img/oops-dog.jpg',
+    status: 'Oops',
+    text: 'you reached this page in error'
 }];
 
 export default {
