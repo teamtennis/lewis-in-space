@@ -26,7 +26,7 @@ export default class EventApp {
         let user = this.user[0];
         let lastItemPath = user.path.length - 1;
         let eventIndex = user.path[lastItemPath];
-        
+                
         let event = new Event ({
             storyEvent: this.storyEvents[eventIndex]  
         });
@@ -34,10 +34,12 @@ export default class EventApp {
         let choice = new Choice ({
             storyEvent:  this.storyEvents[eventIndex],
             eventIndex: eventIndex,
+            mirror: user.mirror,
 
             onClick: (button) => {                
                 let buttonValue = parseInt(button.value);
                 let buttonName = button.name;
+                
                 
                 user.score += buttonValue;
                 choiceArea.style.display = 'none';

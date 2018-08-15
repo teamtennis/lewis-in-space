@@ -47,6 +47,17 @@
 
 }
 
+.game-continue-button,
+.game-results,
+.start-over-button,
+.dark-influence-button,
+.get-fuel-button,
+.ending-button,
+.pirate,
+.evil,
+.darth {
+	display: none;
+}
 /* 
 ** CREDIT FOR STAR WARS SCROLL GOES TO 
 ** Craig Buckler
@@ -62,7 +73,7 @@ body, html
 	font-weight: 700;
 	color: #daa520;
 	background-color: #000;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 /* 
 @-webkit-keyframes intro {

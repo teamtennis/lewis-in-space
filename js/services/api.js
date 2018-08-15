@@ -12,7 +12,8 @@ function createUser() {
         score: 0,
         choices: [],
         path: [],
-        userShip: ''
+        userShip: '',
+        mirror: []
     }];
     return data;
 }
