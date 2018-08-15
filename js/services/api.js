@@ -57,8 +57,8 @@ let storyEvents = [{
     choice1b: 'You have no weapons, a ship barely big enough for a dog, and and limited snack fuel. Even if you could get to the asteroid in time, you could easily run out of fuel and never make it home to Planet Alchemy where you have friends and family waiting for you. With some reluctance, you continue on your journey as if you never heard the distress signal',
     buttonText1a: 'Choice A',
     buttonText1b: 'Choice B',
-    choice1aResult: 'choice 1a results text',
-    choice1bResult: 'choice 1b results text'
+    choice1aResult: 'Your outrageous, brave plan to save Furtuna9 worked! A small nudge from your ship changed the course of the asteroid enough that it missed the cat planet. Unfortunately, you\'ve used up most of your snack fuel and are at risk of becoming stranded in space. You have to make a stop and take some risks to get more fuel.',
+    choice1bResult: 'By the time the asteroid strikes Furtuna9, you are about to cross our of cat-space with plenty of snack fuel to continue your journey. You can\'t see the impact and the planet is just a dot in the distance. You put it out of your mind, but you\'ve changed.'
 }, {
     title: 'Some Other Story',
     text: 'some other story text',
