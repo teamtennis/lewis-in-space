@@ -4,11 +4,11 @@ import html from '../html.js';
 let template = function() {
     return html`   
         <section>           
-            <a href="../../html/choose-ship.html" class="begin-button">
+            <a href="choose-ship.html" class="begin-button">
                 <img src="img/beginbutton.png" width="20%"/> 
                 
             <audio class="star-wars-theme">
-                <source src="../../music/starwars.mp3" type="audio/mpeg">
+                <source src="music/starwars.mp3" type="audio/mpeg">
             </audio>
 
         </section>
