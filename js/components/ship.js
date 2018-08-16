@@ -2,7 +2,7 @@ import html from '/js/html.js';
 
 let template = function(ship) {
     return html`
-         <a href="../../html/direction.html" class="ship-link">
+         <a href="direction.html" class="ship-link">
             <img class="ship-image" src="${ship.img}"> 
         </a>
    `;

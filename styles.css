@@ -127,10 +127,10 @@ button {
 }
 
 .choicea {
-	background: url("./img/choice-a-button.png");
+	background: url("img/choice-a-button.png");
 }
 .choiceb {
-	background: url("./img/choice-b-button.png");
+	background: url("img/choice-b-button.png");
 }
 .choicea,
 .choiceb {

@@ -11,13 +11,13 @@ let template = function(user) {
                 <button type="reset" class="reset-path">Reset path history</button>
             </section>
 
-            <a href="html/event.html" class="left-arrow">
+            <a href="event.html" class="left-arrow">
             <img src="img/left-arrow.png" width="20%" />   
             
-            <a href="html/event.html" class="up-arrow">
+            <a href="event.html" class="up-arrow">
             <img src="img/up-arrow.png" width="20%" />     
             
-            <a href="html/event.html" class="right-arrow">
+            <a href="event.html" class="right-arrow">
             <img src="img/right-arrow.png" width="20%" />    
     `;
 };

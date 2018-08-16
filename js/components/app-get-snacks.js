@@ -4,12 +4,12 @@ import api from '../services/api.js';
 let template = function(resultText) {
     return html`   
         <p>Lewis's space ship runs on snack fuel and he no longer has enough snacks to continue on his journey. He is a dog shark at the poker table, so he seeks out a nearby game, but no dog can win all the time. He bets the only thing he has, his ship. Click the button below to find out if Lewis wins enough snacks to continue his journey. </p>
-        <img src="../../img/dog-poker-placeholder.png">
+        <img src="img/dog-poker-placeholder.png">
         <button class="results-button" type="submit">Get game results</button>
         <p class="game-results">${resultText}</p>
-        <a class="game-continue-button" href="../../html/direction.html">Continue</a>
-        <a class="start-over-button" href="../../html/choose-ship.html">Start Over</a>
-        <a class="ending-button" href="../../html/ending.html">Continue</a>
+        <a class="game-continue-button" href="direction.html">Continue</a>
+        <a class="start-over-button" href="choose-ship.html">Start Over</a>
+        <a class="ending-button" href="ending.html">Continue</a>
         `;
 };
 

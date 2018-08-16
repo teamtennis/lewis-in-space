@@ -6,7 +6,7 @@ let template = function() {
     return html`   
         <section class="ending"></section>
 
-        <a href="../../html/about.html">Continue</a>   
+        <a href="about.html">Continue</a>   
     `;
 };
 

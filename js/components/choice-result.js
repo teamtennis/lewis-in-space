@@ -3,8 +3,8 @@ import html from '/js/html.js';
 let template = function(text) {
     return html`
         <p>${text}</p>
-        <a class="get-fuel-button" href="../../html/get-snacks.html">Get Snack Fuel</a>
-        <a class="dark-influence-button" href="../../html/dark-influence.html">You've Changed</a>
+        <a class="get-fuel-button" href="/get-snacks.html">Get Snack Fuel</a>
+        <a class="dark-influence-button" href="dark-influence.html">You've Changed</a>
     `;
 };
 
