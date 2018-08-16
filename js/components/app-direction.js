@@ -38,13 +38,13 @@ export default class DirectionApp {
         
 
         if(user.path.indexOf(0) !== -1) {
-            upArrow.style.display = 'none';
+            upArrow.style.visibility = 'hidden';
         }
         if(user.path.indexOf(1) !== -1) {
-            leftArrow.style.display = 'none';
+            leftArrow.style.visibility = 'hidden';
         }
         if(user.path.indexOf(2) !== -1) {
-            rightArrow.style.display = 'none';
+            rightArrow.style.visibility = 'hidden';
         }
        
         upArrow.addEventListener('click', () => {
