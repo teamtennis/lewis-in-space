@@ -1,4 +1,4 @@
-import html from '/js/html.js';
+import html from '../html.js';
 
 let template = function(storyEvent, eventIndex, choice1, choice2) {
     return html`
