@@ -158,10 +158,15 @@ button {
 .dark-influence-button  {
 	background: url("img/mirror-button.png");
 }
+.game-continue-button {
+	background: url("img/continue-button.png");
+}
+
 .choicea,
 .choiceb,
 .get-fuel-button,
-.dark-influence-button {
+.dark-influence-button,
+.game-continue-button {
 	background-size: contain;
 	background-repeat: no-repeat;
 	box-shadow: 0px 0px 40px rgb(156, 150, 112);
@@ -174,6 +179,10 @@ button {
 .get-fuel-button {
 	width: 300px;
 	height: 68px;
+}
+.game-continue-button {
+	width: 300px;
+	height: 55px;
 }
 
 .dark-influence-button {
@@ -195,7 +204,8 @@ button {
 	margin: 0 30px 50px;
 }
 
-.event-image {
+.event-image,
+.mirror {
 	width: 100vw;
 }
 
@@ -210,8 +220,7 @@ button {
 	font-size: 2em;
 }
 
-.event-text p,
- {
+.event-text p {
 	color: rgb(202, 189, 129);
 	font-size: 1.1em;
 }
@@ -228,6 +237,18 @@ button {
 	margin: 30px auto;
 }
 
+#dark-influence-root h1 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #36be36;
+	font-size: 3em;
+	text-align: center;
+}
+#dark-influence-root h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #f1f7f1;
+	font-size: 2em;
+	text-align: center;
+}
 
 .game-continue-button,
 .game-results,
