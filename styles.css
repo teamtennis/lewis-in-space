@@ -94,9 +94,6 @@ button {
 	justify-content: center;
 	align-items: center;
 	grid-area: rightarrow;
-	width:
-	height:
-	
 }
 
 .up-arrow {
@@ -151,8 +148,36 @@ button {
 }
 
 .crew {
-	width: 200px;
-	background-color: red;
+	font-size: 14pt;
+	
+}
+
+.crew img {
+	width: 100%;
+}
+
+#about-background {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	align-items: center;
+}
+
+.sarah {
+	grid-area: sarah;
+}
+.mike {
+	grid-area: mike;
+}
+.sophie {
+	grid-area: sophie;
+}
+.alex {
+	grid-area: alex;
 }
 
 .two-choices h2,
@@ -285,6 +310,8 @@ button {
 .darth {
 	display: none;
 }
+
+
 /* 
 ** CREDIT FOR STAR WARS SCROLL GOES TO 
 ** Craig Buckler
