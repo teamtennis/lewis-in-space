@@ -1,4 +1,5 @@
 * { padding: 0; margin: 0; }
+* { border: 1px red solid;}
 
 button {
 	cursor: pointer;
@@ -46,6 +47,15 @@ button {
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
+	margin: 0 auto;
+	display: grid;
+	width: 100vw;
+    height: 100vh;
+	
+	grid-template-areas: 
+		"uparrow uparrow uparrow"
+		"leftarrow rocket rightarrow"
+		"text text text"
 }
 
 .direction-text {
@@ -54,30 +64,25 @@ button {
 
 .right-arrow {
 	grid-area: rightarrow;
+	
 
 }
 
 .up-arrow {
 	grid-area: uparrow;
-
-
-}
-
-.left-arrow {grid-area: leftarrow;
-
-
-}
-
-.direction-grid{
-	margin: 0 auto;
-	display: grid;
-	width: 100vw;
-    height: 100vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	
-	grid-template-areas: 
-		"uparrow"
-		"leftarrow rightarrow"
-		"text"	
+
+	 
+
+}
+
+.left-arrow {
+	grid-area: leftarrow;
+
+
 }
 
 #choose-ship-root {

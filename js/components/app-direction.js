@@ -4,13 +4,13 @@ import api from '../services/api.js';
 
 let template = function(user) {
     return html`   
-        <div class="direction-screen direction-grid">
-            <section>
-                <img src="${user.userShip}" alt="rocket" width="40%">          
-                <p class="direction-text">Which direction will Lewis choose to fly? Click an arrow.</p>
-                <button type="reset" class="reset-path">Reset path history</button>
-            </section>
+        <div class="direction-screen">
 
+            <img src="${user.userShip}" alt="rocket" width="40%"> 
+                     
+            <p class="direction-text">Which direction will Lewis choose to fly? Click an arrow.</p>
+            <button type="reset" class="reset-path">Reset path history</button>
+    
             <a href="event.html" class="left-arrow">
             <img src="img/left-arrow.png" width="20%" />   
             
