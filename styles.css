@@ -43,6 +43,45 @@ button {
 	margin: auto;
 }
 
+.direction-screen {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+}
+
+.direction-text {
+	grid-area: text
+}
+
+.right-arrow {
+	grid-area: rightarrow;
+
+}
+
+.up-arrow {
+	grid-area: uparrow;
+
+
+}
+
+.left-arrow {grid-area: leftarrow;
+
+
+}
+
+.direction-grid{
+	margin: 0 auto;
+	display: grid;
+	width: 100vw;
+    height: 100vh;
+	
+	grid-template-areas: 
+		"uparrow"
+		"leftarrow rightarrow"
+		"text"	
+}
+
 #choose-ship-root {
 	background-image: url("img/background.jpg");
 	background-size: cover;
@@ -53,8 +92,7 @@ button {
 	
 }
 
-#backstory-root {
-	
+#backstory-root {	
     background-image: url("img/backstory-background.jpg");
     background-size: cover;
     width: 100vw;
@@ -63,8 +101,7 @@ button {
     background-position: center;
 }
 
-.lewis-logo {
-	
+.lewis-logo {	
 	grid-area: lewis;
 	margin: auto;
 	width: 75%
@@ -78,7 +115,6 @@ button {
 .crew {
 	width: 200px;
 	background-color: red;
-
 }
 
 .two-choices h2 {
