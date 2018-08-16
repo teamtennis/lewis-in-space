@@ -1,14 +1,14 @@
 import html from '../html.js';
 import api from '../services/api.js';
 
-let template = function(src) {
+let template = function() {
     return html`   
         <h2>Take a look in the mirror to see who you're becoming:</h2>
-        <a class="game-continue-button" href="./direction.html">Continue</a>
-        <a class="ending-button" href="./ending.html">Continue</a>
-        <img class="pirate" src="../../img/pirate-placeholder.jpg">
-        <img class="evil" src="../../img/evil-placeholder.jpg">
-        <img class="darth" src="../../img/darth-placeholder.jpg">
+        <a class="game-continue-button" href="direction.html">Continue</a>
+        <a class="ending-button" href="ending.html">Continue</a>
+        <img class="pirate" src="img/pirate-placeholder.jpg">
+        <img class="evil" src="img/evil-placeholder.jpg">
+        <img class="darth" src="img/darth-placeholder.jpg">
     `;
 };
 
