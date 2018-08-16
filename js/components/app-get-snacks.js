@@ -3,13 +3,19 @@ import api from '../services/api.js';
 
 let template = function(resultText) {
     return html`   
-        <p>Lewis's space ship runs on snack fuel and he no longer has enough snacks to continue on his journey. He is a dog shark at the poker table, so he seeks out a nearby game, but no dog can win all the time. He bets the only thing he has, his ship. Click the button below to find out if Lewis wins enough snacks to continue his journey. </p>
-        <img src="img/dog-poker-placeholder.png">
-        <button class="results-button" type="submit">Get game results</button>
-        <p class="game-results">${resultText}</p>
-        <a class="game-continue-button" href="direction.html">Continue</a>
-        <a class="start-over-button" href="choose-ship.html">Start Over</a>
-        <a class="ending-button" href="ending.html">Continue</a>
+        <img src="img/poker.jpg">
+        <div class="poker-text">
+            <h1>Dog Playing Poker</h1>
+            <p>Lewis's space ship runs on snack fuel and he no longer has enough snacks to continue on his journey. He is a dog shark at the poker table, so he seeks out a nearby game, but no dog can win all the time. He bets the only thing he has, his ship. Click the button below to find out if Lewis wins enough snacks to continue his journey. </p>
+            <button class="results-button" type="submit"></button>
+        </div>
+        <div class="game-results">
+            <h2>You played your best and...</h2>
+            <h4>${resultText}</h4>
+            <a class="game-continue-button" href="direction.html"></a>
+            <a class="start-over-button" href="choose-ship.html"></a>
+            <a class="ending-button" href="ending.html"></a>
+        </div>
         `;
 };
 
@@ -30,9 +36,9 @@ export default class GetSnacksApp {
         let resultText;
 
         if(randomNum <= 8) {
-            resultText = 'You won big and now have enough snack fuel to continue your journey';
+            resultText = 'You won big! You have enough snack fuel to continue.';
         } else {
-            resultText = 'You gambled your ship and lost. You will have to start again from the beginning.';
+            resultText = 'You gambled your ship and lost. You will have to start the game again.';
         }
 
         let dom = template(resultText);
@@ -67,7 +73,7 @@ export default class GetSnacksApp {
                 }
             } else {
                 continueButton.style.display = 'none';
-                startOverButton.style.display = '';
+                startOverButton.style.display = 'block';
                 gameResults.style.display = 'block';
                 resultsButton.style.display = 'none';
             }
