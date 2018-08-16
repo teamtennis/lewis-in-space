@@ -7,8 +7,8 @@ let template = function() {
             <a href="choose-ship.html" class="begin-button">
                 <img src="img/beginbutton.png" width="20%"/> 
                 
-            <audio class="star-wars-theme">
-                <source src="music/starwars.mp3" type="audio/mpeg">
+            <audio src="music/starwars.mp3" autoplay>
+               
             </audio>
 
         </section>
