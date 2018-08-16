@@ -1,4 +1,5 @@
 * { padding: 0; margin: 0; }
+* { border: 1px red solid;}
 
 button {
 	cursor: pointer;
@@ -46,38 +47,59 @@ button {
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
+	padding: 0 40px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	display: grid;
+	align-items: center;
+	
+	
+	grid-template-areas: 
+		". uparrow ."
+		"leftarrow ship rightarrow"
+		"text text text"
 }
 
 .direction-text {
-	grid-area: text
+	font-size: 2em;
+	text-align: center;
+	grid-area: text	
 }
 
+.chosen-ship {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: ship;
+	width: 100%;	
+}
 .right-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	grid-area: rightarrow;
-
+	width:
+	height:
+	
 }
 
 .up-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	grid-area: uparrow;
-
-
-}
-
-.left-arrow {grid-area: leftarrow;
-
-
-}
-
-.direction-grid{
-	margin: 0 auto;
-	display: grid;
-	width: 100vw;
-    height: 100vh;
 	
-	grid-template-areas: 
-		"uparrow"
-		"leftarrow rightarrow"
-		"text"	
+
+}
+
+.left-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: leftarrow;
+	
+
+
 }
 
 #choose-ship-root {
