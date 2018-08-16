@@ -47,40 +47,53 @@ button {
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
+	padding: 0 40px;
+	box-sizing: border-box;
 	margin: 0 auto;
 	display: grid;
-	width: 100vw;
-    height: 100vh;
+	
 	
 	grid-template-areas: 
-		"uparrow uparrow uparrow"
-		"leftarrow rocket rightarrow"
+		". uparrow ."
+		"leftarrow ship rightarrow"
 		"text text text"
 }
 
 .direction-text {
-	grid-area: text
+	font-size: 2em;
+	text-align: center;
+	grid-area: text	
 }
 
+.chosen-ship {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: ship;	
+}
 .right-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	grid-area: rightarrow;
 	
-
 }
 
 .up-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	grid-area: uparrow;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	
-
-	 
 
 }
 
 .left-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	grid-area: leftarrow;
+	
 
 
 }
