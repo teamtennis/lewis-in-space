@@ -1,6 +1,22 @@
 * { padding: 0; margin: 0; }
 * { border: 1px red solid;}
 
+/* font-family: 'Nosifer', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Faster One', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Titillium Web', sans-serif; */
+
+h1, 
+h2 {
+	font-family: 'Press Start 2P', sans-serif;
+}
+
+p {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+
 button {
 	cursor: pointer;
 }
@@ -139,15 +155,19 @@ button {
 	background-color: red;
 }
 
-.two-choices h2 {
+.two-choices h2,
+.choice-result h2 {
 	text-align: center;
-	color: #36be36;
-	padding: 0 0 20px 0;
+	color: #e4bc0a;
+	padding: 0 20px 20px 20px;
+	font-size: 1.3em;
 }
 
 .two-choices p {
 	margin: 10px;
 	color: rgb(202, 189, 129);
+	font-size: 1.1em;
+
 }
 
 .choicea {
@@ -156,15 +176,42 @@ button {
 .choiceb {
 	background: url("img/choice-b-button.png");
 }
+.get-fuel-button {
+	background: url("img/get-fuel-button.png");
+}
+.dark-influence-button  {
+	background: url("img/mirror-button.png");
+}
+.game-continue-button {
+	background: url("img/continue-button.png");
+}
+
 .choicea,
-.choiceb {
+.choiceb,
+.get-fuel-button,
+.dark-influence-button,
+.game-continue-button {
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 300px;
-	height: 68px;
 	box-shadow: 0px 0px 40px rgb(156, 150, 112);
 	border: none;
-	margin: 20px;
+	margin: 0 auto;
+}
+
+.choicea,
+.choiceb,
+.get-fuel-button {
+	width: 300px;
+	height: 68px;
+}
+.game-continue-button {
+	width: 300px;
+	height: 55px;
+}
+
+.dark-influence-button {
+	height: 100px;
+	width: 220px;
 }
 
 
@@ -173,9 +220,6 @@ button {
 	padding: 20px;
 	text-align: center;
 	width: 50%;
-	display: absolute;
-	top: 50;
-	left: 50;
 }
 
 .choices {
@@ -184,25 +228,51 @@ button {
 	margin: 0 30px 50px;
 }
 
-.event-image {
+.event-image,
+.mirror {
 	width: 100vw;
 }
 
 .event-text {
-	padding: 50px;
+	padding: 60px;
 }
 
 .event-text h1 {
 	text-align: center;
 	color: #36be36;
 	padding: 0 0 15px 0;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 .event-text p {
-	color: rgb(196, 167, 38);
+	color: rgb(202, 189, 129);
+	font-size: 1.1em;
 }
 
+.choice-result {
+	color: rgb(202, 189, 129);
+	font-size: 1.1em;
+	padding: 40px;
+	margin: 0 20px;
+	border-top: 1px solid rgb(202, 189, 129);
+}
+
+.choice-result a {
+	margin: 30px auto;
+}
+
+#dark-influence-root h1 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #36be36;
+	font-size: 3em;
+	text-align: center;
+}
+#dark-influence-root h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #f1f7f1;
+	font-size: 2em;
+	text-align: center;
+}
 
 .game-continue-button,
 .game-results,
