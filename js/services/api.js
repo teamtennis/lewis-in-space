@@ -57,11 +57,11 @@ let storyEvents = [{
 let storyEndings = [{
     img: 'img/good-planet-placeholder.jpg',
     status: 'you are home',
-    text: 'this is the story of your good ending'
+    text: 'You are a good dog! You stayed on the path of righteousness, you will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come. '
 }, {
     img: 'img/bad-planet-placeholder.jpg',
     status: 'you are a bad bad doggo',
-    text: 'this is the story of your bad ending'
+    text: 'Oh no! You’ve been a bad dog! Your selfish deeds have caught the eye of Darth Journey, and he’s now grooming you as his apprentice on the <<<whatever the bad planet’s name>>>. The ground is hard, the treats are scarce, and your new uniform is really itchy.'
 }, {
     img: 'img/oops-dog.jpg',
     status: 'Oops',
