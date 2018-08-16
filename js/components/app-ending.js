@@ -6,7 +6,7 @@ let template = function() {
     return html`   
         <section class="ending"></section>
 
-        <a href="about.html">Continue</a>   
+        <a class="game-continue-button" href="about.html">Continue</a>   
     `;
 };
 
