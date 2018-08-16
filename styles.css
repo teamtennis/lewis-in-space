@@ -94,8 +94,7 @@ button {
 	justify-content: center;
 	align-items: center;
 	grid-area: rightarrow;
-	width:
-	height:
+	
 	
 }
 
@@ -105,7 +104,6 @@ button {
 	align-items: center;
 	grid-area: uparrow;
 	
-
 }
 
 .left-arrow {
@@ -114,7 +112,6 @@ button {
 	align-items: center;
 	grid-area: leftarrow;
 	
-
 
 }
 
