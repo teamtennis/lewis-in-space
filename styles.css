@@ -6,10 +6,6 @@ button {
 	cursor: pointer;
 }
 
-.event-image {
-    height: 300px;
-}
-
 .choice-result {
     display: none;
 }
@@ -93,7 +89,7 @@ button {
 .two-choices h2 {
 	text-align: center;
 	color: #36be36;
-	padding: 20px;
+	padding: 0 0 20px 0;
 }
 
 .two-choices p {
@@ -133,6 +129,25 @@ button {
 	text-align: center;
 	display: flex;
 	margin: 0 30px 50px;
+}
+
+.event-image {
+	width: 100vw;
+}
+
+.event-text {
+	padding: 50px;
+}
+
+.event-text h1 {
+	text-align: center;
+	color: #36be36;
+	padding: 0 0 15px 0;
+	font-size: 3em;
+}
+
+.event-text p {
+	color: rgb(196, 167, 38);
 }
 
 
