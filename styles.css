@@ -1,8 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
-}
 * { padding: 0; margin: 0; }
 
+button {
+	cursor: pointer;
+}
 
 .event-image {
     height: 300px;
@@ -86,6 +88,51 @@
 	width: 200px;
 	background-color: red;
 
+}
+
+.two-choices h2 {
+	text-align: center;
+	color: #36be36;
+	padding: 20px;
+}
+
+.two-choices p {
+	margin: 10px;
+	color: rgb(202, 189, 129);
+}
+
+.choicea {
+	background: url("./img/choice-a-button.png");
+}
+.choiceb {
+	background: url("./img/choice-b-button.png");
+}
+.choicea,
+.choiceb {
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 68px;
+	box-shadow: 0px 0px 40px rgb(156, 150, 112);
+	border: none;
+	margin: 20px;
+}
+
+
+.choice {
+	border-top: 1px solid rgb(156, 150, 112);
+	padding: 20px;
+	text-align: center;
+	width: 50%;
+	display: absolute;
+	top: 50;
+	left: 50;
+}
+
+.choices {
+	text-align: center;
+	display: flex;
+	margin: 0 30px 50px;
 }
 
 
