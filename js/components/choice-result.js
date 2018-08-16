@@ -4,8 +4,8 @@ let template = function(text) {
     return html`
         <h2>The Consequences of Your Choice</h2>
         <p>${text}</p>
-        <a class="get-fuel-button" href="get-snacks.html">Get Snack Fuel</a>
-        <a class="dark-influence-button" href="dark-influence.html">You've Changed</a>
+        <a class="get-fuel-button" href="get-snacks.html"></a>
+        <a class="dark-influence-button" href="dark-influence.html"></a>
     `;
 };
 
@@ -29,11 +29,11 @@ export default class ChoiceResult {
         console.log('darkChoice', darkChoice);
     
         if(darkChoice !== -1) {
-            darkInfluenceButton.style.display = 'inline-block';
+            darkInfluenceButton.style.display = 'block';
             getFuelButton.style.display = 'none';
         } else {
             darkInfluenceButton.style.display = 'none';
-            getFuelButton.style.display = 'inline-block';
+            getFuelButton.style.display = 'block';
         }
 
 

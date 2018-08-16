@@ -52,7 +52,7 @@ export default class GetSnacksApp {
             
             if(randomNum <= 8) {
                 if(choiceNumber < 3) {
-                    continueButton.style.display = 'inline-block';
+                    continueButton.style.display = 'block';
                     endingButton.style.display = 'none';
                     startOverButton.style.display = 'none';
                     gameResults.style.display = 'block';
@@ -60,14 +60,14 @@ export default class GetSnacksApp {
                 } 
                 else {
                     continueButton.style.display = 'none';
-                    endingButton.style.display = 'inline-block';
+                    endingButton.style.display = 'block';
                     startOverButton.style.display = 'none';
                     gameResults.style.display = 'block';
                     resultsButton.style.display = 'none';
                 }
             } else {
                 continueButton.style.display = 'none';
-                startOverButton.style.display = 'inline-block';
+                startOverButton.style.display = '';
                 gameResults.style.display = 'block';
                 resultsButton.style.display = 'none';
             }

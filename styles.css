@@ -166,7 +166,7 @@ button {
 	background-repeat: no-repeat;
 	box-shadow: 0px 0px 40px rgb(156, 150, 112);
 	border: none;
-	margin: 20px auto;
+	margin: 0 auto;
 }
 
 .choicea,
@@ -187,9 +187,6 @@ button {
 	padding: 20px;
 	text-align: center;
 	width: 50%;
-	display: absolute;
-	top: 50;
-	left: 50;
 }
 
 .choices {
@@ -222,7 +219,13 @@ button {
 .choice-result {
 	color: rgb(202, 189, 129);
 	font-size: 1.1em;
-	padding: 60px;
+	padding: 40px;
+	margin: 0 20px;
+	border-top: 1px solid rgb(202, 189, 129);
+}
+
+.choice-result a {
+	margin: 30px auto;
 }
 
 

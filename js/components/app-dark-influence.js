@@ -38,12 +38,12 @@ export default class DarkInfluence {
         }
 
         if(choiceNumber < 3) {
-            continueButton.style.display = 'inline-block';
+            continueButton.style.display = 'block';
             endingButton.style.display = 'none';
         }
         else {
             continueButton.style.display = 'none';
-            endingButton.style.display = 'inline-block';
+            endingButton.style.display = 'block';
         }
 
         return dom;
