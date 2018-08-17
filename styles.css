@@ -163,14 +163,14 @@ button {
 	text-align: center;
 	color: #e4bc0a;
 	padding: 0 20px 20px 20px;
-	font-size: 1.3em;
+	font-size: 2em;
 }
 
 .two-choices p {
 	margin: 10px;
 	color: rgb(202, 189, 129);
-	font-size: 1.1em;
-
+	font-size: 1.6em;
+	line-height: 1.6em;
 }
 
 .choicea {
@@ -270,20 +270,22 @@ button {
 	text-align: center;
 	color: #36be36;
 	padding: 0 0 15px 0;
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 .event-text p {
 	color: rgb(202, 189, 129);
-	font-size: 1.1em;
+	font-size: 1.6em;
+	line-height: 1.6em;
 }
 
 .choice-result {
 	color: rgb(202, 189, 129);
-	font-size: 1.1em;
+	font-size: 1.6em;
 	padding: 40px;
 	margin: 0 20px;
 	border-top: 1px solid rgb(202, 189, 129);
+	line-height: 1.6em;
 }
 
 .choice-result a {
