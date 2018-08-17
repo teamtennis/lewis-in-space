@@ -53,22 +53,22 @@ export default class GetSnacksApp {
             if(randomNum <= 8) {
                 if(choiceNumber < 3) {
                     continueButton.style.display = 'block';
+                    gameResults.style.display = 'block';
                     endingButton.style.display = 'none';
                     startOverButton.style.display = 'none';
-                    gameResults.style.display = 'block';
                     resultsButton.style.display = 'none';
                 } 
                 else {
-                    continueButton.style.display = 'none';
                     endingButton.style.display = 'block';
-                    startOverButton.style.display = 'none';
                     gameResults.style.display = 'block';
+                    continueButton.style.display = 'none';
+                    startOverButton.style.display = 'none';
                     resultsButton.style.display = 'none';
                 }
             } else {
-                continueButton.style.display = 'none';
                 startOverButton.style.display = 'block';
                 gameResults.style.display = 'block';
+                continueButton.style.display = 'none';
                 resultsButton.style.display = 'none';
             }
 

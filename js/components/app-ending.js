@@ -26,9 +26,11 @@ export default class EndingApp {
 
         if(choiceNumber >= 3 && userScore === 3) {
             userEnding = endings[0];
+            music = 'music/cantina-band.mp3';
         }
         else if(choiceNumber >= 3 && userScore === 1) {
             userEnding = endings[1];
+            music = 'music/cantina-band.mp3';
         }
         else if(choiceNumber >= 3 && userScore < 0) {
             userEnding = endings[2];
