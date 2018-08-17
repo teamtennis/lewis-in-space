@@ -7,11 +7,11 @@ let template = function(storyEvent, eventIndex, choice1, choice2) {
             <div class="choices">
                 <div class="choice">
                     <p>${storyEvent[choice1]}</p>
-                    <button type="submit" value="1" name="choice${eventIndex}aResult" class="choicea"></button>
+                    <button type="submit" value="1" name="choice${eventIndex}aResult" class="choicea grow"></button>
                 </div>  
                 <div class="choice">
                     <p>${storyEvent[choice2]}</p>
-                    <button type="submit" value="-1" name="choice${eventIndex}bResult" class="choiceb"></button>
+                    <button type="submit" value="-1" name="choice${eventIndex}bResult" class="choiceb grow"></button>
                 </div> 
             </div> 
         </section>

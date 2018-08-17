@@ -3,7 +3,7 @@ import html from '../html.js';
 let template = function(ship) {
     return html`
          <a href="direction.html" class="ship-link">
-            <img class="ship-image" src="${ship.img}"> 
+            <img class="ship-image bounce" src="${ship.img}"> 
         </a>
    `;
 };

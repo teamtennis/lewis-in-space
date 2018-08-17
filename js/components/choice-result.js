@@ -2,10 +2,10 @@ import html from '../html.js';
 
 let template = function(text) {
     return html`
-        <h2>The Consequences of Your Choice</h2>
+        <h2>Consequences</h2>
         <p>${text}</p>
-        <a class="get-fuel-button" href="get-snacks.html"></a>
-        <a class="dark-influence-button" href="dark-influence.html"></a>
+        <a class="get-fuel-button grow" href="get-snacks.html"></a>
+        <a class="dark-influence-button grow" href="dark-influence.html"></a>
     `;
 };
 
