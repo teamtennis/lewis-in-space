@@ -12,13 +12,13 @@ let template = function(user) {
             <button type="reset" class="reset-path">Reset path history</button>
     
             <a href="event.html" class="left-arrow">
-            <img src="img/left-arrow.png" width="20%" />   
+            <img src="img/left-arrow.png" width=40%/>   
             
             <a href="event.html" class="up-arrow">
-            <img src="img/up-arrow.png" width="20%" />     
+            <img src="img/up-arrow.png" width=40%/>     
             
             <a href="event.html" class="right-arrow">
-            <img src="img/right-arrow.png" width="20%" />    
+            <img src="img/right-arrow.png" width=40%/>    
     `;
 };
 
@@ -38,13 +38,13 @@ export default class DirectionApp {
         
 
         if(user.path.indexOf(0) !== -1) {
-            upArrow.style.display = 'none';
+            upArrow.style.visibility = 'hidden';
         }
         if(user.path.indexOf(1) !== -1) {
-            leftArrow.style.display = 'none';
+            leftArrow.style.visibility = 'hidden';
         }
         if(user.path.indexOf(2) !== -1) {
-            rightArrow.style.display = 'none';
+            rightArrow.style.visibility = 'hidden';
         }
        
         upArrow.addEventListener('click', () => {

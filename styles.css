@@ -1,5 +1,5 @@
 * { padding: 0; margin: 0; }
-* { border: 1px red solid;}
+
 
 /* font-family: 'Nosifer', cursive;
 font-family: 'Creepster', cursive;
@@ -28,7 +28,7 @@ button {
 	margin: 0 auto;
 	display: grid;
 	width: 75vw;
-    height: 100vh;
+    /* height: 100vh; */
 	
 	grid-template-areas: 
 		"lewis lewis"
@@ -93,19 +93,14 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	grid-area: rightarrow;
-	width:
-	height:
-	
+	grid-area: rightarrow;	
 }
 
 .up-arrow {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	grid-area: uparrow;
-	
-
+	grid-area: uparrow;	
 }
 
 .left-arrow {
@@ -113,19 +108,15 @@ button {
 	justify-content: center;
 	align-items: center;
 	grid-area: leftarrow;
-	
-
-
 }
 
 #choose-ship-root {
 	background-image: url("img/background.jpg");
 	background-size: cover;
-    width: 100vw;
-    height: 100vh;
+	width: 100vw;
+    height: fit-content;
     background-repeat: no-repeat;
-    background-position: center;
-	
+    background-position: center;	
 }
 
 #backstory-root {	
