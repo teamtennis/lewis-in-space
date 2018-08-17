@@ -23,12 +23,13 @@ export default class EndingApp {
         let endings = this.storyEndings;
         let userEnding;
 
-        if(choiceNumber === 3 && userScore > 0) {
+        if(choiceNumber >= 3 && userScore === 3) {
             userEnding = endings[0];
         }
-        else if(choiceNumber === 3 && userScore < 0) {
+        else if(choiceNumber >= 3 && userScore === 1) {
             userEnding = endings[1];
-        } else {
+        }
+        else if(choiceNumber >= 3 && userScore < 0) {
             userEnding = endings[2];
         }
 

@@ -5,10 +5,7 @@ let template = function() {
         <section>           
             <a href="choose-ship.html" class="begin-button">
             <img src="img/beginbutton.png" width="20%"/> </a>
-                
-            <audio class="star-wars-theme" autoplay>
-                <source src="music/starwars.mp3" type="audio/mpeg">
-            </audio>
+            <audio id="star-wars-theme" src="music/starwars.mp3" loop="loop"></audio>
         </section>
     `;
 };
@@ -17,11 +14,12 @@ export default class BackstoryApp {
  
     render() {
         let dom = template();
-        let audio = dom.querySelector('.star-wars-theme');
-        
-        audio.onMouseMove = function() {
+        let audio = dom.querySelector('audio');
+
+        window.onload = function() {
             audio.play();
         };
+
         
         return dom;
     }

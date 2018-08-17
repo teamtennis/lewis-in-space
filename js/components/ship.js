@@ -21,8 +21,7 @@ export default class Ship {
 
         shipImage.addEventListener('click', () => {
             this.onSelect(this.ship);
-        });
-        
+        }); 
 
         return dom;
     }

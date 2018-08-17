@@ -1,6 +1,6 @@
 import html from '../html.js';
 
-let template = function(image, text, status) {
+let template = function(image, text) {
     return html`
         <h2 class="ending-text">${text}</h2>
         <a class="game-continue-button" href="about.html"></a>
@@ -16,9 +16,8 @@ export default class Ending {
     render() {
         let endingImage = this.ending.img;
         let endingText = this.ending.text;
-        let endingStatus = this.ending.status;
 
-        let dom = template(endingImage, endingText, endingStatus);
+        let dom = template(endingImage, endingText);
         return dom;
     }
 }
