@@ -55,10 +55,10 @@ let storyEvents = [{
 
 let storyEndings = [{
     img: 'img/win-ending.png',
-    text: 'You are a good dog! You stayed on the path of righteousness, you will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come.'
+    text: 'You are a good dog! You stayed on the path of righteousness. You will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come.'
 }, {
     img: 'img/win-ending.png',
-    text: 'You made a seriously questionable choice in the course of your journey, but you veered toward courage and caring for others, and that helped you on your journey home. You have been reunited with Princess Megan Organa and Marty Solo, the story of your journey will be spoken about for generations to come.'
+    text: 'You made a seriously questionable choice in the course of your travels, but you veered toward courage and caring for others, and that helped you on your journey home. You have been reunited with Princess Megan Organa and Marty Solo and your story will be told for generations to come.'
 }, {
     img: 'img/new-game-over.png',
     text: 'Oh no! You’ve been a bad dog! Your selfish deeds have caught the eye of Darth Journey, and he’s now grooming you as his apprentice. The ground is hard, the treats are scarce, and your new uniform is really itchy.'
