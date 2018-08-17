@@ -22,6 +22,7 @@ export default class EndingApp {
         let endingArea = dom.querySelector('.ending');
         let endings = this.storyEndings;
         let userEnding;
+        let music;
 
         if(choiceNumber >= 3 && userScore === 3) {
             userEnding = endings[0];
@@ -31,10 +32,12 @@ export default class EndingApp {
         }
         else if(choiceNumber >= 3 && userScore < 0) {
             userEnding = endings[2];
+            music = 'music/imperialborks.mp3';
         }
 
         let ending = new Ending ({
-            ending: userEnding
+            ending: userEnding,
+            music: music
         });
 
         endingArea.appendChild(ending.render());
