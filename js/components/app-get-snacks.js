@@ -7,16 +7,16 @@ let template = function(resultText) {
         <div class="poker-text">
             <h1>Dog Playing Poker</h1>
             <p>Lewis's space ship runs on snack fuel and he no longer has enough snacks to continue on his journey. He is a dog shark at the poker table, so he seeks out a nearby game, but no dog can win all the time. He bets the only thing he has, his ship. Click the button below to find out if Lewis wins enough snacks to continue his journey. </p>
-            <button class="results-button" type="submit"></button>
+            <button class="results-button grow" type="submit"></button>
         </div>
         <div class="game-results">
             <h2>You played your best and...</h2>
             <h4>${resultText}</h4>
-            <a class="game-continue-button" href="direction.html"></a>
-            <a class="start-over-button" href="choose-ship.html"></a>
-            <a class="ending-button" href="ending.html"></a>
+            <a class="game-continue-button grow" href="direction.html"></a>
+            <a class="start-over-button grow" href="choose-ship.html"></a>
+            <a class="ending-button grow" href="ending.html"></a>
         </div>
-        `;
+    `;
 };
 
 export default class GetSnacksApp {
@@ -47,12 +47,6 @@ export default class GetSnacksApp {
         let endingButton = dom.querySelector('.ending-button');
         let startOverButton = dom.querySelector('.start-over-button');
         let gameResults = dom.querySelector('.game-results');
-
-        console.log('choice number', choiceNumber);
-
-
-
-        console.log('random', randomNum);
 
         resultsButton.addEventListener('click', () => {
             

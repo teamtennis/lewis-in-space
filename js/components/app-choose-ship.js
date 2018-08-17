@@ -10,7 +10,6 @@ let template = function() {
                 <p class="choose-ship">Choose your ship:</p>
                 <div class="ship-choices"></div>
             </div>
-           
         </section>
     `;
 };

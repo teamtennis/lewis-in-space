@@ -6,18 +6,20 @@ let template = function(user) {
     return html`   
         <div class="direction-screen">
 
-            <img src="${user.userShip}" class="chosen-ship" alt="rocket" width="40%"> 
+            <img src="${user.userShip}" class="chosen-ship ship-direction bounce" alt="rocket" width="40%"> 
                      
             <p class="direction-text">Which direction will Lewis choose to fly? Click an arrow.</p>
     
-            <a href="event.html" class="left-arrow">
+            <a href="event.html" class="left-arrow grow2">
             <img src="img/left-arrow.png" width=40%/>   
             
-            <a href="event.html" class="up-arrow">
+            <a href="event.html" class="up-arrow grow2">
             <img src="img/up-arrow.png" width=40%/>     
             
-            <a href="event.html" class="right-arrow">
-            <img src="img/right-arrow.png" width=40%/>    
+            <a href="event.html" class="right-arrow grow2">
+            <img src="img/right-arrow.png" width=40%/> 
+
+        </div>   
     `;
 };
 
@@ -28,7 +30,6 @@ export default class DirectionApp {
 
     render() {
         let user = this.user[0];
-        console.log(user);
         let dom = template(user);
         let upArrow = dom.querySelector('.up-arrow');
         let leftArrow = dom.querySelector('.left-arrow');

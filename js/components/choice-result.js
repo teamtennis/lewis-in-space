@@ -2,10 +2,10 @@ import html from '../html.js';
 
 let template = function(text) {
     return html`
-        <h2>The Consequences of Your Choice</h2>
+        <h2>Consequences</h2>
         <p>${text}</p>
-        <a class="get-fuel-button" href="get-snacks.html"></a>
-        <a class="dark-influence-button" href="dark-influence.html"></a>
+        <a class="get-fuel-button grow" href="get-snacks.html"></a>
+        <a class="dark-influence-button grow" href="dark-influence.html"></a>
     `;
 };
 
@@ -26,7 +26,6 @@ export default class ChoiceResult {
 
 
         let darkChoice = result.indexOf('b');
-        console.log('darkChoice', darkChoice);
     
         if(darkChoice !== -1) {
             darkInfluenceButton.style.display = 'block';
@@ -36,9 +35,6 @@ export default class ChoiceResult {
             getFuelButton.style.display = 'block';
         }
 
-
-        console.log('result text', text);
-        
         return dom;
     }
 }

@@ -1,44 +1,344 @@
 * { padding: 0; margin: 0; }
 
-
-/* font-family: 'Nosifer', cursive;
-font-family: 'Creepster', cursive;
-font-family: 'Faster One', cursive;
-font-family: 'Press Start 2P', cursive;
-font-family: 'Titillium Web', sans-serif; */
-
 h1, 
 h2 {
 	font-family: 'Press Start 2P', sans-serif;
 }
 
-#get-snacks-root p {
-	font-family: 'Titillium Web', sans-serif;
-	color: rgb(202, 189, 129);
-	padding: 30px;
+/*/////////////////////////////////
+**  Transformations
+////////////////////////////////*/
+
+.grow { 
+	transition: all 1s ease-in-out; 
 }
 
-.poker-text {
-	padding: 20px;
+.grow:hover { 
+	transform: scale(1.05);
+	box-shadow: 0px 0px 35px rgb(221, 209, 117);
 }
 
-.poker-text p {
-	line-height: 150%;
-	font-size: 1.6em;
+.grow2 { 
+	transition: all 1s ease-in-out; 
 }
+
+.grow2:hover { 
+	transform: scale(1.15);
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+	animation-duration: 1.4s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0s;
+	animation-iteration-count: 0;
+	animation-direction: alternate;
+	animation-play-state: paused;
+  }
+
+  .bounce:hover {
+	animation-play-state:running;
+	animation-iteration-count: 100;
+  }
+  
+  @keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);opacity: 1;}
+	40% {transform: translateY(-6px);}
+	60% {transform: translateY(-3px);}
+  }
+
+/*/////////////////////////////////
+**  Buttons
+////////////////////////////////*/
+
+/* Button Images */
+
+.choicea {
+	background: url("img/choice-a-button.png");
+}
+
+.choiceb {
+	background: url("img/choice-b-button.png");
+}
+
+.get-fuel-button {
+	background: url("img/get-fuel-button.png");
+}
+
+.dark-influence-button  {
+	background: url("img/mirror-button.png");
+}
+
+.game-continue-button {
+	background: url("img/continue-button.png");
+}
+
+.results-button {
+	background: url("img/results-button.png");
+}
+
+.ending-button {
+	background: url("img/ending-button.png");
+}
+
+.start-over-button {
+	background: url("img/start-over-button.png");
+}
+
+.results-button {
+	margin-bottom: 50px;
+}
+
+/* Button Properties */
 
 button {
 	cursor: pointer;
 }
 
-.choice-result {
-    display: none;
+.choicea,
+.choiceb,
+.get-fuel-button,
+.dark-influence-button,
+.game-continue-button,
+.results-button,
+.ending-button,
+.start-over-button,
+.ending-button,
+.play-again-button {
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 25px rgb(156, 150, 112);
+	border: none;
+	margin: 0 auto;	
 }
+
+.game-continue-button,
+.game-results,
+.start-over-button,
+.dark-influence-button,
+.get-fuel-button,
+.ending-button {
+	display: none;
+}
+
+.choicea,
+.choiceb,
+.get-fuel-button,
+.results-button,
+.start-over-button {
+	width: 300px;
+	height: 68px;
+}
+
+.game-continue-button {
+	width: 300px;
+	height: 55px;
+}
+
+.dark-influence-button,
+.ending-button {
+	height: 100px;
+	width: 220px;
+}
+
+.ending-button {
+	width: 300px;
+	height: 160px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.start-over {
+	width: 500px;
+}
+
+.game-results {
+	padding-bottom: 40px;
+}
+
+#ending-root .game-continue-button {
+	display: block;
+	margin-bottom: 40px;
+}
+
+.play-again-button {
+	margin: 60px auto;
+}
+
+.choicea,
+.choiceb {
+	margin-top: 30px;
+}
+
+.results-button {
+	margin-bottom: 25px;
+}
+
+.get-fuel-button,
+.dark-influence-button {
+	margin: 40px auto 20px;
+}
+
+#dark-influence-root a {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+/*/////////////////////////////////
+**  Backstory Component
+////////////////////////////////*/
+
+.begin-button {
+	display: block;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+}
+
+#backstory-root {	
+    background-image: url("img/backstory-background.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ 
+/* STAR WARS SCROLL MODIFIED FROM CODE BY: 
+** Craig Buckler
+** http://www.sitepoint.com/css3-starwars-scrolling-text/ */
+
+
+body, html {
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+	  font-weight: 700;
+	  color: #daa520;
+	  background-color: #000;
+  }
+  
+  #titles {
+	  position: absolute;
+	  width: 18em;
+	  height: 50em;
+	  bottom: 0;
+	  margin-left: -9em;
+	  left: 50%;
+	  font-size: 600%;
+	  text-align: justify;
+	  overflow: hidden;
+	  -webkit-transform-origin: 50% 100%;
+	  -moz-transform-origin: 50% 100%;
+	  -ms-transform-origin: 50% 100%;
+	  -o-transform-origin: 50% 100%;
+	  transform-origin: 50% 100%;
+	  -webkit-transform: perspective(50vh) rotateX(25deg);
+	  -moz-transform: perspective(50vh) rotateX(25deg);
+	  -ms-transform: perspective(50vh) rotateX(25deg);
+	  -o-transform: perspective(50vh) rotateX(25deg);
+	  transform: perspective(50vh) rotateX(25deg);
+	  text-shadow: 6px 6px black;
+  }
+  
+  #titles:after {
+	  position: absolute;
+	  content: ' ';
+	  left: 0;
+	  right: 0;
+	  top: 0;
+	  bottom: 60%;
+	  background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	  background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	  background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	  background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	  pointer-events: none;
+  }
+  
+  #titles p {
+	  text-align: justify;
+	  margin: 0.8em 0;
+  }
+  
+  #titles p.center {
+	  text-align: center;
+  }
+  
+  #titles a {
+	  color: #ff6;
+	  text-decoration: underline;
+  }
+  
+  #titlecontent {
+	  position: absolute;
+	  top: 100%;
+	  -webkit-animation: scroll 180s linear 0s infinite;
+	  -moz-animation: scroll 180s linear 0s infinite;
+	  -ms-animation: scroll 180s linear 0s infinite;
+	  -o-animation: scroll 180s linear 0s infinite;
+	  animation: scroll 180s linear 0s infinite;
+  }
+  
+  /* animation */
+  @-webkit-keyframes scroll {
+	  0% { top: 100%; }
+	  100% { top: -170%; }
+  }
+  
+  @-moz-keyframes scroll {
+	  0% { top: 100%; }
+	  100% { top: -170%; }
+  }
+  
+  @-ms-keyframes scroll {
+	  0% { top: 100%; }
+	  100% { top: -170%; }
+  }
+  
+  @-o-keyframes scroll {
+	  0% { top: 100%; }
+	  100% { top: -170%; }
+  }
+  
+  @keyframes scroll {
+	  0% { top: 100%; }
+	  100% { top: -170%; }
+  }  
+
+/*/////////////////////////////////
+**  Choose Ship Component
+////////////////////////////////*/
+
+.lewis-logo {	
+	grid-area: lewis;
+	margin: auto;
+	width: 75%
+}
+
+#choose-ship-root {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+	width: 100vw;
+	height: fit-content;
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+
+.choose-ship{
+	grid-area: choose;
+	font-size: 2em;
+	margin: auto;
+}
+
 .ship-grid{
 	margin: 0 auto;
 	display: grid;
 	width: 75vw;
-    /* height: 100vh; */
 	
 	grid-template-areas: 
 		"lewis lewis"
@@ -58,15 +358,14 @@ button {
 	display: inline;
 	
 }
+
 .ship-image{
 	width: 49%;
 }
 
-.choose-ship{
-	grid-area: choose;
-	font-size: 2em;
-	margin: auto;
-}
+/*/////////////////////////////////
+**  Direction Component
+////////////////////////////////*/
 
 .direction-screen {
 	background-image: url("img/background.jpg");
@@ -99,6 +398,7 @@ button {
 	grid-area: ship;
 	width: 100%;	
 }
+
 .right-arrow {
 	display: flex;
 	justify-content: center;
@@ -120,166 +420,13 @@ button {
 	grid-area: leftarrow;
 }
 
-#choose-ship-root {
-	background-image: url("img/background.jpg");
-	background-size: cover;
-	width: 100vw;
-    height: fit-content;
-    background-repeat: no-repeat;
-    background-position: center;	
-}
+/*/////////////////////////////////
+** Event Components
+////////////////////////////////*/
 
-#backstory-root {	
-    background-image: url("img/backstory-background.jpg");
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/* Story Event Image and Description */
 
-.lewis-logo {	
-	grid-area: lewis;
-	margin: auto;
-	width: 75%
-}
-
-.begin-button {
-	display: block;
-	text-align: center;
-	position: relative;
-	z-index: 100;
-}
-
-.crew {
-	font-size: 14pt;
-	
-}
-
-.crew img {
-	width: 100%;
-}
-
-#about-root {
-	background-image: url("img/background.jpg");
-	background-size: cover;
-	width: 100vw;
-	background-repeat: no-repeat;
-	min-height: 100vh;
-}
-.about-crew {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-	align-items: center;
-}
-
-.two-choices h2,
-.choice-result h2 {
-	text-align: center;
-	color: #e4bc0a;
-	padding: 0 20px 20px 20px;
-	font-size: 2em;
-	line-height: 150%;
-}
-
-.two-choices p {
-	margin: 10px;
-	color: rgb(202, 189, 129);
-	font-size: 1.6em;
-	line-height: 150%;
-}
-
-.choicea {
-	background: url("img/choice-a-button.png");
-}
-.choiceb {
-	background: url("img/choice-b-button.png");
-}
-.get-fuel-button {
-	background: url("img/get-fuel-button.png");
-}
-.dark-influence-button  {
-	background: url("img/mirror-button.png");
-}
-.game-continue-button {
-	background: url("img/continue-button.png");
-}
-
-.results-button {
-	background: url("img/results-button.png");
-}
-.ending-button {
-	background: url("img/ending-button.png");
-}
-.start-over-button {
-	background: url("img/start-over-button.png");
-}
-
-.results-button {
-	margin-bottom: 50px;
-}
-
-.choicea,
-.choiceb,
-.get-fuel-button,
-.dark-influence-button,
-.game-continue-button,
-.results-button,
-.ending-button,
-.start-over-button,
-.ending-button {
-	background-size: contain;
-	background-repeat: no-repeat;
-	box-shadow: 0px 0px 40px rgb(156, 150, 112);
-	border: none;
-	margin: 0 auto;
-	display: block;
-}
-
-.choicea,
-.choiceb,
-.get-fuel-button,
-.results-button,
-.start-over-button {
-	width: 300px;
-	height: 68px;
-}
-.game-continue-button {
-	width: 300px;
-	height: 55px;
-}
-
-.dark-influence-button,
-.ending-button {
-	height: 100px;
-	width: 220px;
-}
-
-.ending-button {
-	width: 300px;
-	height: 160px;
-}
-
-.start-over {
-	width: 500px;
-}
-
-
-.choice {
-	border-top: 1px solid rgb(156, 150, 112);
-	padding: 20px;
-	text-align: center;
-	width: 50%;
-}
-
-.choices {
-	text-align: center;
-	display: flex;
-	margin: 0 30px 50px;
-}
-
-.event-image,
-.mirror {
+.event-image {
 	width: 100vw;
 }
 
@@ -290,7 +437,7 @@ button {
 .event-text h1 {
 	text-align: center;
 	color: #36be36;
-	padding: 0 0 15px 0;
+	padding: 0 0 20px 0;
 	font-size: 2.5em;
 	line-height: 150%;
 }
@@ -299,6 +446,21 @@ button {
 	color: rgb(202, 189, 129);
 	font-size: 1.6em;
 	line-height: 150%;
+}
+
+/* User Choice Component */
+
+.choices {
+	text-align: center;
+	display: flex;
+	margin: 0 30px 50px;
+}
+
+.choice {
+	border-top: 1px solid rgb(156, 150, 112);
+	padding: 20px;
+	text-align: center;
+	width: 50%;
 }
 
 .choice-result {
@@ -310,8 +472,34 @@ button {
 	line-height: 150%;
 }
 
-.choice-result a {
-	margin: 30px auto;
+.two-choices h2,
+.choice-result h2 {
+	text-align: center;
+	color: #e4bc0a;
+	padding: 0 20px 20px 20px;
+	font-size: 1.4em;
+	line-height: 150%;
+}
+
+.two-choices p {
+	margin: 10px;
+	color: rgb(202, 189, 129);
+	font-size: 1.6em;
+	line-height: 150%;
+}
+
+.choice-result {
+    display: none;
+}
+
+/* Dark Influence Component */
+
+.mirror {
+	width: 100vw;
+}
+
+.mirror-text {
+	padding-bottom: 40px;
 }
 
 #dark-influence-root h1 {
@@ -320,29 +508,24 @@ button {
 	font-size: 3em;
 	text-align: center;
 }
-#dark-influence-root h2,
-#ending-root h2 {
+
+#dark-influence-root h2 {
 	font-family: 'Titillium Web', sans-serif;
 	color: #f1f7f1;
 	font-size: 2em;
 	text-align: center;
 }
 
-#ending-root img {
-	width: 100vw;
-}
-
-#ending-root h2 {
-	margin: 50px;
-}
+/* Get Snacks Component */
 
 #get-snacks-root img {
 	width: 100vw;
 }
 
-#get-snacks-root h2 {
+#get-snacks-root h1 {
 	color: #36be36;
 	padding: 20px;
+	margin-top: 20px;
 }
 
 #get-snacks-root {
@@ -352,7 +535,11 @@ button {
 #get-snacks-root h4 {
 	text-align: center;
 	padding: 20px 20px 30px 20px;
-	font-size: 1.3em;
+	font-size: 1.6em;
+}
+
+#get-snacks-root h2 {
+	margin-bottom: 20px;
 }
 
 #get-snacks-root button {
@@ -360,132 +547,79 @@ button {
 	padding: 20px;
 }
 
-.game-results {
-	padding-bottom: 40px;
+#get-snacks-root p {
+	font-family: 'Titillium Web', sans-serif;
+	color: rgb(202, 189, 129);
+	padding: 30px;
 }
 
-
-.game-continue-button,
-.game-results,
-.start-over-button,
-.dark-influence-button,
-.get-fuel-button,
-.ending-button,
-.pirate,
-.evil,
-.darth {
-	display: none;
+.poker-text {
+	padding: 20px;
 }
 
-#ending-root .game-continue-button {
-	display: block;
-	margin-bottom: 40px;
-}
-/* 
-** CREDIT FOR STAR WARS SCROLL GOES TO 
-** Craig Buckler
-** http://www.sitepoint.com/css3-starwars-scrolling-text/
-body, html 
-*/
-body, html
-{
-  width: 100%;
-  height: 100%;
-  font-family: sans-serif;
-	font-weight: 700;
-	color: #daa520;
-	background-color: #000;
-}
-#titles
-{
-	position: absolute;
-	width: 18em;
-	height: 50em;
-	bottom: 0;
-	margin-left: -9em;
-	left: 50%;
-	font-size: 600%;
-	text-align: justify;
-	overflow: hidden;
-	-webkit-transform-origin: 50% 100%;
-	-moz-transform-origin: 50% 100%;
-	-ms-transform-origin: 50% 100%;
-	-o-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
-	-webkit-transform: perspective(50vh) rotateX(25deg);
-	-moz-transform: perspective(50vh) rotateX(25deg);
-	-ms-transform: perspective(50vh) rotateX(25deg);
-	-o-transform: perspective(50vh) rotateX(25deg);
-	transform: perspective(50vh) rotateX(25deg);
-	text-shadow: 6px 6px black;
+.poker-text p {
+	line-height: 150%;
+	font-size: 1.6em;
 }
 
-#titles:after
-{
-	position: absolute;
-	content: ' ';
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 60%;
-	/* background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%); */
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	pointer-events: none;
-}
+/*/////////////////////////////////
+** Ending Component
+////////////////////////////////*/
 
-#titles p
-{
-	text-align: justify;
-	margin: 0.8em 0;
-}
-
-#titles p.center
-{
+#ending-root h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #f1f7f1;
+	font-size: 2em;
 	text-align: center;
+	margin: 50px;
 }
 
-#titles a
-{
-	color: #ff6;
-	text-decoration: underline;
+#ending-root img {
+	width: 100vw;
 }
 
-#titlecontent
-{
-	position: absolute;
-	top: 100%;
-	-webkit-animation: scroll 180s linear 0s infinite;
-	-moz-animation: scroll 180s linear 0s infinite;
-	-ms-animation: scroll 180s linear 0s infinite;
-	-o-animation: scroll 180s linear 0s infinite;
-	animation: scroll 180s linear 0s infinite;
+/*/////////////////////////////////
+**  About Component
+////////////////////////////////*/
+
+#about-root {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+	width: 100vw;
+	background-repeat: no-repeat;
+	min-height: 100vh;
 }
 
-/* animation */
-@-webkit-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
+.about-crew {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+	align-items: center;
 }
 
-@-moz-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
+.crew {
+	font-size: 14pt;
+	
 }
 
-@-ms-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
+.crew img {
+	width: 100%;
 }
 
-@-o-keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
+.crew p {
+	color: rgb(202, 189, 129);
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1.3em;
+	text-align: center;
+	padding-bottom: 5px;
+	
 }
 
-@keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
+.crew em {
+	font-style: normal;
+	color: #36be36;
+}
+
+.crew-text {
+	padding: 35px;
+	background-color: rgba(0, 0, 0, 0.541);
 }
