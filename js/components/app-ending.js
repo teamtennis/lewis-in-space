@@ -4,9 +4,7 @@ import Ending from './ending.js';
 
 let template = function() {
     return html`   
-        <section class="ending"></section>
-
-        <a class="game-continue-button" href="about.html">Continue</a>   
+        <section class="ending"></section>  
     `;
 };
 

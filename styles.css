@@ -296,11 +296,20 @@ button {
 	font-size: 3em;
 	text-align: center;
 }
-#dark-influence-root h2 {
+#dark-influence-root h2,
+#ending-root h2 {
 	font-family: 'Titillium Web', sans-serif;
 	color: #f1f7f1;
 	font-size: 2em;
 	text-align: center;
+}
+
+#ending-root img {
+	width: 100vw;
+}
+
+#ending-root h2 {
+	margin: 50px;
 }
 
 #get-snacks-root img {
@@ -342,6 +351,11 @@ button {
 .evil,
 .darth {
 	display: none;
+}
+
+#ending-root .game-continue-button {
+	display: block;
+	margin-bottom: 40px;
 }
 /* 
 ** CREDIT FOR STAR WARS SCROLL GOES TO 
