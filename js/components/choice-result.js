@@ -26,7 +26,6 @@ export default class ChoiceResult {
 
 
         let darkChoice = result.indexOf('b');
-        console.log('darkChoice', darkChoice);
     
         if(darkChoice !== -1) {
             darkInfluenceButton.style.display = 'block';
@@ -36,9 +35,6 @@ export default class ChoiceResult {
             getFuelButton.style.display = 'block';
         }
 
-
-        console.log('result text', text);
-        
         return dom;
     }
 }

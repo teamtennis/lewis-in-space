@@ -1,72 +1,17 @@
 * { padding: 0; margin: 0; }
 
-
-/* font-family: 'Nosifer', cursive;
-font-family: 'Creepster', cursive;
-font-family: 'Faster One', cursive;
-font-family: 'Press Start 2P', cursive;
-font-family: 'Titillium Web', sans-serif; */
-
 h1, 
 h2 {
 	font-family: 'Press Start 2P', sans-serif;
-}
-
-#get-snacks-root p {
-	font-family: 'Titillium Web', sans-serif;
-	color: rgb(202, 189, 129);
-	padding: 30px;
-}
-
-.poker-text {
-	padding: 20px;
-}
-
-.poker-text p {
-	line-height: 150%;
-	font-size: 1.6em;
 }
 
 button {
 	cursor: pointer;
 }
 
-.choice-result {
-    display: none;
-}
-.ship-grid{
-	margin: 0 auto;
-	display: grid;
-	width: 75vw;
-    /* height: 100vh; */
-	
-	grid-template-areas: 
-		"lewis lewis"
-		"lewis lewis"
-		"choose choose"
-		"rocket rocket"		
-}
-
-.ship-choices{
-	margin: 0 auto;
-	grid-area: rocket;
-	width: fit-content;
-}
-
-.ship-link{
-	margin: auto;
-	display: inline;
-	
-}
-.ship-image{
-	width: 49%;
-}
-
-.choose-ship{
-	grid-area: choose;
-	font-size: 2em;
-	margin: auto;
-}
+/*/////////////////////////////////
+**  Direction Component
+////////////////////////////////*/
 
 .direction-screen {
 	background-image: url("img/background.jpg");
@@ -99,6 +44,7 @@ button {
 	grid-area: ship;
 	width: 100%;	
 }
+
 .right-arrow {
 	display: flex;
 	justify-content: center;
@@ -120,6 +66,16 @@ button {
 	grid-area: leftarrow;
 }
 
+/*/////////////////////////////////
+**  Choose Ship Component
+////////////////////////////////*/
+
+.lewis-logo {	
+	grid-area: lewis;
+	margin: auto;
+	width: 75%
+}
+
 #choose-ship-root {
 	background-image: url("img/background.jpg");
 	background-size: cover;
@@ -127,6 +83,51 @@ button {
     height: fit-content;
     background-repeat: no-repeat;
     background-position: center;	
+}
+
+.choose-ship{
+	grid-area: choose;
+	font-size: 2em;
+	margin: auto;
+}
+
+.ship-grid{
+	margin: 0 auto;
+	display: grid;
+	width: 75vw;
+	
+	grid-template-areas: 
+		"lewis lewis"
+		"lewis lewis"
+		"choose choose"
+		"rocket rocket"		
+}
+
+.ship-choices{
+	margin: 0 auto;
+	grid-area: rocket;
+	width: fit-content;
+}
+
+.ship-link{
+	margin: auto;
+	display: inline;
+	
+}
+
+.ship-image{
+	width: 49%;
+}
+
+/*/////////////////////////////////
+**  Backstory Component
+////////////////////////////////*/
+
+.begin-button {
+	display: block;
+	text-align: center;
+	position: relative;
+	z-index: 100;
 }
 
 #backstory-root {	
@@ -138,17 +139,22 @@ button {
     background-position: center;
 }
 
-.lewis-logo {	
-	grid-area: lewis;
-	margin: auto;
-	width: 75%
+/*/////////////////////////////////
+**  About Component
+////////////////////////////////*/
+
+#about-root {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+	width: 100vw;
+	background-repeat: no-repeat;
+	min-height: 100vh;
 }
 
-.begin-button {
-	display: block;
-	text-align: center;
-	position: relative;
-	z-index: 100;
+.about-crew {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	align-items: center;
 }
 
 .crew {
@@ -160,63 +166,17 @@ button {
 	width: 100%;
 }
 
-#about-root {
-	background-image: url("img/background.jpg");
-	background-size: cover;
-	width: 100vw;
-	background-repeat: no-repeat;
-	min-height: 100vh;
-}
-.about-crew {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-	align-items: center;
-}
+/*/////////////////////////////////
+**  Button Properties
+////////////////////////////////*/
 
-.two-choices h2,
-.choice-result h2 {
-	text-align: center;
-	color: #e4bc0a;
-	padding: 0 20px 20px 20px;
-	font-size: 2em;
-	line-height: 150%;
-}
-
-.two-choices p {
-	margin: 10px;
-	color: rgb(202, 189, 129);
-	font-size: 1.6em;
-	line-height: 150%;
-}
-
-.choicea {
-	background: url("img/choice-a-button.png");
-}
-.choiceb {
-	background: url("img/choice-b-button.png");
-}
-.get-fuel-button {
-	background: url("img/get-fuel-button.png");
-}
-.dark-influence-button  {
-	background: url("img/mirror-button.png");
-}
-.game-continue-button {
-	background: url("img/continue-button.png");
-}
-
-.results-button {
-	background: url("img/results-button.png");
-}
+.game-continue-button,
+.game-results,
+.start-over-button,
+.dark-influence-button,
+.get-fuel-button,
 .ending-button {
-	background: url("img/ending-button.png");
-}
-.start-over-button {
-	background: url("img/start-over-button.png");
-}
-
-.results-button {
-	margin-bottom: 50px;
+	display: none;
 }
 
 .choicea,
@@ -244,6 +204,7 @@ button {
 	width: 300px;
 	height: 68px;
 }
+
 .game-continue-button {
 	width: 300px;
 	height: 55px;
@@ -264,22 +225,60 @@ button {
 	width: 500px;
 }
 
-
-.choice {
-	border-top: 1px solid rgb(156, 150, 112);
-	padding: 20px;
-	text-align: center;
-	width: 50%;
+.game-results {
+	padding-bottom: 40px;
 }
 
-.choices {
-	text-align: center;
-	display: flex;
-	margin: 0 30px 50px;
+#ending-root .game-continue-button {
+	display: block;
+	margin-bottom: 40px;
 }
 
-.event-image,
-.mirror {
+/* Button Images */
+
+.choicea {
+	background: url("img/choice-a-button.png");
+}
+
+.choiceb {
+	background: url("img/choice-b-button.png");
+}
+
+.get-fuel-button {
+	background: url("img/get-fuel-button.png");
+}
+
+.dark-influence-button  {
+	background: url("img/mirror-button.png");
+}
+
+.game-continue-button {
+	background: url("img/continue-button.png");
+}
+
+.results-button {
+	background: url("img/results-button.png");
+}
+
+.ending-button {
+	background: url("img/ending-button.png");
+}
+
+.start-over-button {
+	background: url("img/start-over-button.png");
+}
+
+.results-button {
+	margin-bottom: 50px;
+}
+
+/*/////////////////////////////////
+** Event Components
+////////////////////////////////*/
+
+/* Story Event Image and Description */
+
+.event-image {
 	width: 100vw;
 }
 
@@ -301,6 +300,21 @@ button {
 	line-height: 150%;
 }
 
+/* User Choice Component */
+
+.choices {
+	text-align: center;
+	display: flex;
+	margin: 0 30px 50px;
+}
+
+.choice {
+	border-top: 1px solid rgb(156, 150, 112);
+	padding: 20px;
+	text-align: center;
+	width: 50%;
+}
+
 .choice-result {
 	color: rgb(202, 189, 129);
 	font-size: 1.6em;
@@ -314,27 +328,47 @@ button {
 	margin: 30px auto;
 }
 
+.two-choices h2,
+.choice-result h2 {
+	text-align: center;
+	color: #e4bc0a;
+	padding: 0 20px 20px 20px;
+	font-size: 2em;
+	line-height: 150%;
+}
+
+.two-choices p {
+	margin: 10px;
+	color: rgb(202, 189, 129);
+	font-size: 1.6em;
+	line-height: 150%;
+}
+
+.choice-result {
+    display: none;
+}
+
+/* Dark Influence Component */
+
+.mirror {
+	width: 100vw;
+}
+
 #dark-influence-root h1 {
 	font-family: 'Titillium Web', sans-serif;
 	color: #36be36;
 	font-size: 3em;
 	text-align: center;
 }
-#dark-influence-root h2,
-#ending-root h2 {
+
+#dark-influence-root h2 {
 	font-family: 'Titillium Web', sans-serif;
 	color: #f1f7f1;
 	font-size: 2em;
 	text-align: center;
 }
 
-#ending-root img {
-	width: 100vw;
-}
-
-#ending-root h2 {
-	margin: 50px;
-}
+/* Get Snacks Component */
 
 #get-snacks-root img {
 	width: 100vw;
@@ -360,35 +394,44 @@ button {
 	padding: 20px;
 }
 
-.game-results {
-	padding-bottom: 40px;
+#get-snacks-root p {
+	font-family: 'Titillium Web', sans-serif;
+	color: rgb(202, 189, 129);
+	padding: 30px;
 }
 
-
-.game-continue-button,
-.game-results,
-.start-over-button,
-.dark-influence-button,
-.get-fuel-button,
-.ending-button,
-.pirate,
-.evil,
-.darth {
-	display: none;
+.poker-text {
+	padding: 20px;
 }
 
-#ending-root .game-continue-button {
-	display: block;
-	margin-bottom: 40px;
+.poker-text p {
+	line-height: 150%;
+	font-size: 1.6em;
 }
+
+/*/////////////////////////////////
+** Ending Component
+////////////////////////////////*/
+
+#ending-root h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #f1f7f1;
+	font-size: 2em;
+	text-align: center;
+	margin: 50px;
+}
+
+#ending-root img {
+	width: 100vw;
+}
+
 /* 
-** CREDIT FOR STAR WARS SCROLL GOES TO 
+** STAR WARS SCROLL MODIFIED FROM CODE BY: 
 ** Craig Buckler
 ** http://www.sitepoint.com/css3-starwars-scrolling-text/
-body, html 
 */
-body, html
-{
+
+body, html {
   width: 100%;
   height: 100%;
   font-family: sans-serif;
@@ -396,8 +439,8 @@ body, html
 	color: #daa520;
 	background-color: #000;
 }
-#titles
-{
+
+#titles {
 	position: absolute;
 	width: 18em;
 	height: 50em;
@@ -420,8 +463,7 @@ body, html
 	text-shadow: 6px 6px black;
 }
 
-#titles:after
-{
+#titles:after {
 	position: absolute;
 	content: ' ';
 	left: 0;
@@ -436,25 +478,21 @@ body, html
 	pointer-events: none;
 }
 
-#titles p
-{
+#titles p {
 	text-align: justify;
 	margin: 0.8em 0;
 }
 
-#titles p.center
-{
+#titles p.center {
 	text-align: center;
 }
 
-#titles a
-{
+#titles a {
 	color: #ff6;
 	text-decoration: underline;
 }
 
-#titlecontent
-{
+#titlecontent {
 	position: absolute;
 	top: 100%;
 	-webkit-animation: scroll 180s linear 0s infinite;

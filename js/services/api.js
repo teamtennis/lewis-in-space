@@ -17,7 +17,6 @@ function createUser() {
     }];
     return data;
 }
-console.log('data', data);
 
 let ships = [{ 
     name: 'rocket',

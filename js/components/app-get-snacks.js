@@ -48,12 +48,6 @@ export default class GetSnacksApp {
         let startOverButton = dom.querySelector('.start-over-button');
         let gameResults = dom.querySelector('.game-results');
 
-        console.log('choice number', choiceNumber);
-
-
-
-        console.log('random', randomNum);
-
         resultsButton.addEventListener('click', () => {
             
             if(randomNum <= 8) {

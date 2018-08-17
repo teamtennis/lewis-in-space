@@ -28,7 +28,6 @@ export default class DirectionApp {
 
     render() {
         let user = this.user[0];
-        console.log(user);
         let dom = template(user);
         let upArrow = dom.querySelector('.up-arrow');
         let leftArrow = dom.querySelector('.left-arrow');
