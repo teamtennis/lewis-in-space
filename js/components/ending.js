@@ -16,9 +16,8 @@ export default class Ending {
     render() {
         let endingImage = this.ending.img;
         let endingText = this.ending.text;
-        let endingStatus = this.ending.status;
 
-        let dom = template(endingImage, endingText, endingStatus);
+        let dom = template(endingImage, endingText);
         return dom;
     }
 }
