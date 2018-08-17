@@ -12,10 +12,20 @@ h2 {
 	font-family: 'Press Start 2P', sans-serif;
 }
 
-p {
+#get-snacks-root p {
 	font-family: 'Titillium Web', sans-serif;
+	color: rgb(202, 189, 129);
+	padding: 30px;
 }
 
+.poker-text {
+	padding: 20px;
+}
+
+.poker-text p {
+	line-height: 150%;
+	font-size: 1.6em;
+}
 
 button {
 	cursor: pointer;
@@ -93,7 +103,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	grid-area: rightarrow;
+	grid-area: rightarrow;	
 }
 
 .up-arrow {
@@ -168,14 +178,15 @@ button {
 	text-align: center;
 	color: #e4bc0a;
 	padding: 0 20px 20px 20px;
-	font-size: 1.3em;
+	font-size: 2em;
+	line-height: 150%;
 }
 
 .two-choices p {
 	margin: 10px;
 	color: rgb(202, 189, 129);
-	font-size: 1.1em;
-
+	font-size: 1.6em;
+	line-height: 150%;
 }
 
 .choicea {
@@ -193,25 +204,43 @@ button {
 .game-continue-button {
 	background: url("img/continue-button.png");
 }
-.play-again {
-	background: url("img/play-again.png");
+
+.results-button {
+	background: url("img/results-button.png");
+}
+.ending-button {
+	background: url("img/ending-button.png");
+}
+.start-over-button {
+	background: url("img/start-over-button.png");
+}
+
+.results-button {
+	margin-bottom: 50px;
 }
 
 .choicea,
 .choiceb,
 .get-fuel-button,
 .dark-influence-button,
-.game-continue-button {
+.game-continue-button,
+.results-button,
+.ending-button,
+.start-over-button,
+.ending-button {
 	background-size: contain;
 	background-repeat: no-repeat;
 	box-shadow: 0px 0px 40px rgb(156, 150, 112);
 	border: none;
 	margin: 0 auto;
+	display: block;
 }
 
 .choicea,
 .choiceb,
-.get-fuel-button {
+.get-fuel-button,
+.results-button,
+.start-over-button {
 	width: 300px;
 	height: 68px;
 }
@@ -220,9 +249,15 @@ button {
 	height: 55px;
 }
 
-.dark-influence-button {
+.dark-influence-button,
+.ending-button {
 	height: 100px;
 	width: 220px;
+}
+
+.ending-button {
+	width: 300px;
+	height: 160px;
 }
 
 .start-over {
@@ -256,20 +291,23 @@ button {
 	text-align: center;
 	color: #36be36;
 	padding: 0 0 15px 0;
-	font-size: 2em;
+	font-size: 2.5em;
+	line-height: 150%;
 }
 
 .event-text p {
 	color: rgb(202, 189, 129);
-	font-size: 1.1em;
+	font-size: 1.6em;
+	line-height: 150%;
 }
 
 .choice-result {
 	color: rgb(202, 189, 129);
-	font-size: 1.1em;
+	font-size: 1.6em;
 	padding: 40px;
 	margin: 0 20px;
 	border-top: 1px solid rgb(202, 189, 129);
+	line-height: 150%;
 }
 
 .choice-result a {
@@ -282,12 +320,50 @@ button {
 	font-size: 3em;
 	text-align: center;
 }
-#dark-influence-root h2 {
+#dark-influence-root h2,
+#ending-root h2 {
 	font-family: 'Titillium Web', sans-serif;
 	color: #f1f7f1;
 	font-size: 2em;
 	text-align: center;
 }
+
+#ending-root img {
+	width: 100vw;
+}
+
+#ending-root h2 {
+	margin: 50px;
+}
+
+#get-snacks-root img {
+	width: 100vw;
+}
+
+#get-snacks-root h2 {
+	color: #36be36;
+	padding: 20px;
+}
+
+#get-snacks-root {
+	text-align: center;
+}
+
+#get-snacks-root h4 {
+	text-align: center;
+	padding: 20px 20px 30px 20px;
+	font-size: 1.3em;
+}
+
+#get-snacks-root button {
+	text-align: center;
+	padding: 20px;
+}
+
+.game-results {
+	padding-bottom: 40px;
+}
+
 
 .game-continue-button,
 .game-results,
@@ -301,7 +377,10 @@ button {
 	display: none;
 }
 
-
+#ending-root .game-continue-button {
+	display: block;
+	margin-bottom: 40px;
+}
 /* 
 ** CREDIT FOR STAR WARS SCROLL GOES TO 
 ** Craig Buckler

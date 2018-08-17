@@ -3,8 +3,8 @@ import api from '../services/api.js';
 
 let template = function() {
     return html`   
-        <a class="game-continue-button" href="direction.html">Continue</a>
-        <a class="ending-button" href="ending.html">Continue</a>
+        <a class="game-continue-button" href="direction.html"></a>
+        <a class="ending-button" href="ending.html"></a>
         <h1>Lewis, You've Changed</h1>
         <h2>Take a look in the mirror...<h2>
         <img class="mirror1 mirror" src="img/dark-influence-1.jpg">

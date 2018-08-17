@@ -2,9 +2,9 @@ import html from '../html.js';
 
 let template = function(image, text, status) {
     return html`
-        <h1>${status}</h1>
+        <h2 class="ending-text">${text}</h2>
+        <a class="game-continue-button" href="about.html"></a>
         <img class="ending-image" src="${image}">
-        <p class="ending-text">${text}</p>
    `;
 };
 

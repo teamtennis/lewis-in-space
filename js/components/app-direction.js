@@ -9,7 +9,6 @@ let template = function(user) {
             <img src="${user.userShip}" class="chosen-ship" alt="rocket" width="40%"> 
                      
             <p class="direction-text">Which direction will Lewis choose to fly? Click an arrow.</p>
-            <button type="reset" class="reset-path">Reset path history</button>
     
             <a href="event.html" class="left-arrow">
             <img src="img/left-arrow.png" width=40%/>   
@@ -34,8 +33,6 @@ export default class DirectionApp {
         let upArrow = dom.querySelector('.up-arrow');
         let leftArrow = dom.querySelector('.left-arrow');
         let rightArrow = dom.querySelector('.right-arrow');
-        let resetPath = dom.querySelector('.reset-path');
-        
 
         if(user.path.indexOf(0) !== -1) {
             upArrow.style.visibility = 'hidden';
@@ -55,9 +52,6 @@ export default class DirectionApp {
         });
         rightArrow.addEventListener('click', () => {
             user.path.push(2);
-        });
-        resetPath.addEventListener('click', () => {
-            user.path = [];
         });
 
         return dom;
