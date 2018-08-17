@@ -156,28 +156,17 @@ button {
 	width: 100%;
 }
 
-#about-background {
+#about-root {
 	background-image: url("img/background.jpg");
 	background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
+	width: 100vw;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+.about-crew {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 	align-items: center;
-}
-
-.sarah {
-	grid-area: sarah;
-}
-.mike {
-	grid-area: mike;
-}
-.sophie {
-	grid-area: sophie;
-}
-.alex {
-	grid-area: alex;
 }
 
 .two-choices h2,
@@ -210,6 +199,9 @@ button {
 .game-continue-button {
 	background: url("img/continue-button.png");
 }
+.play-again {
+	background: url("img/play-again.png");
+}
 
 .choicea,
 .choiceb,
@@ -237,6 +229,10 @@ button {
 .dark-influence-button {
 	height: 100px;
 	width: 220px;
+}
+
+.start-over {
+	width: 500px;
 }
 
 
