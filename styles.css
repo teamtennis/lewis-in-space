@@ -1,5 +1,5 @@
 * { padding: 0; margin: 0; }
-* { border: 1px red solid;}
+
 
 /* font-family: 'Nosifer', cursive;
 font-family: 'Creepster', cursive;
@@ -38,7 +38,7 @@ button {
 	margin: 0 auto;
 	display: grid;
 	width: 75vw;
-    height: 100vh;
+    /* height: 100vh; */
 	
 	grid-template-areas: 
 		"lewis lewis"
@@ -110,9 +110,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	grid-area: uparrow;
-	
-
+	grid-area: uparrow;	
 }
 
 .left-arrow {
@@ -120,19 +118,15 @@ button {
 	justify-content: center;
 	align-items: center;
 	grid-area: leftarrow;
-	
-
-
 }
 
 #choose-ship-root {
 	background-image: url("img/background.jpg");
 	background-size: cover;
-    width: 100vw;
-    height: 100vh;
+	width: 100vw;
+    height: fit-content;
     background-repeat: no-repeat;
-    background-position: center;
-	
+    background-position: center;	
 }
 
 #backstory-root {	
@@ -158,8 +152,25 @@ button {
 }
 
 .crew {
-	width: 200px;
-	background-color: red;
+	font-size: 14pt;
+	
+}
+
+.crew img {
+	width: 100%;
+}
+
+#about-root {
+	background-image: url("img/background.jpg");
+	background-size: cover;
+	width: 100vw;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+.about-crew {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	align-items: center;
 }
 
 .two-choices h2,
@@ -193,6 +204,7 @@ button {
 .game-continue-button {
 	background: url("img/continue-button.png");
 }
+
 .results-button {
 	background: url("img/results-button.png");
 }
@@ -246,6 +258,10 @@ button {
 .ending-button {
 	width: 300px;
 	height: 160px;
+}
+
+.start-over {
+	width: 500px;
 }
 
 
