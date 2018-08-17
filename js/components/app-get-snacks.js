@@ -16,7 +16,7 @@ let template = function(resultText) {
             <a class="start-over-button" href="choose-ship.html"></a>
             <a class="ending-button" href="ending.html"></a>
         </div>
-        `;
+    `;
 };
 
 export default class GetSnacksApp {

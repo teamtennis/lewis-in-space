@@ -2,15 +2,15 @@ import html from '../html.js';
 
 let template = function() {
     return html` 
-    <section class="about-crew">
-        <div id="sarah" class="crew">
+        <section class="about-crew">
+            <div id="sarah" class="crew">
                 <img src="img/sarah-about.png" alt="sarah-image">
                 <p>Favorite Dog: Goldendoodle <br>
                     Favorite Sci Fi Series: Battlestar Galactica <br>
                     Fun Fact: Tone Deaf Whistler.
                 </p>
             </div>
-            
+                
             <div id="mike" class="crew">
                 <img src="img/mike-about.png" alt="mike-image">
                 <p>Favorite Dog: Dachshund <br>
@@ -18,7 +18,7 @@ let template = function() {
                     Fun Fact: Can Whistle.<br>
                 </p>
             </div>
-            
+                
             <div id="sophie" class="crew">
                 <img src="img/sophie-about.png" alt="sophie-image">
                 <p>Favorite Dog: Air Bud <br>
@@ -38,7 +38,7 @@ let template = function() {
 
         <section>                    
             <a href="choose-ship.html" class="play-again">
-            <img src="img/play-again.png" width="20%"/> 
+            <img class="play-again-button" src="img/play-again.png" width="40%"/> 
         </section>
     `;
 };
