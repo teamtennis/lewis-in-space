@@ -48,14 +48,17 @@ let storyEvents = [{
     text: 'You are so happy when you notice you\'re nearing the ice moon Algid, where your good friend Fluffy the Wampa lives. Although some think you two make an odd pair, you have a surprising amount in common. For instance, you are both very protective of your personal space. You decide to surprise her with a visit. You land and your friend comes out to greet you, but when you give her a big hug (with your eyes), you notice how thin she is. Fluffy reluctantly admits that she\'s been out of snacks for weeks, which means no food and no fuel.',
     img: 'img/planet-algrid.jpg',  
     choice2a: 'Fluffy is one of your best friends, and it breaks your heart to see her so frail and weak. You leave her with all of the snacks you can spare to help her heal and get back on her big feet.',
-    choice2b: 'Everyone needs a little help sometimes so you give Fluffy just enough snacks fuel a one way trip to the nearest space station. She can get a job and earn her own way there. Give a Wampa a snack, feed her for a day, but teach a Wampa to get snacks, she feeds herself without taking from her friends.',
+    choice2b: 'Everyone needs a little help sometimes so you give Fluffy just enough snacks to fuel a one way trip to the nearest space station. She can get a job and earn her own way there. Give a Wampa a snack, feed her for a day, but teach a Wampa to get snacks, she feeds herself without taking from her friends.',
     choice2aResult: 'You fly away from Algid after a long, pleasant visit during which you and Fluffy always stayed an appropriate distance apart. You are a little concerned about your own snack fuel levels, but you feel good about helping your friend and know she would have done the same for you.',
     choice2bResult: 'You fly away from Algid after a short, pleasant visit. You were clear about your boundaries, and that\'s important in a friendship, right? You hope Fluffy does the right thing, using those snacks to find work rather than binge eating them.'
 }];
 
 let storyEndings = [{
     img: 'img/win-ending.png',
-    text: 'You are a good dog! You stayed on the path of righteousness, you will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come. '
+    text: 'You are a good dog! You stayed on the path of righteousness, you will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come.'
+}, {
+    img: 'img/win-ending.png',
+    text: 'You made a seriously questionable choice in the course of your journey, but you veered toward courage and caring for others, and that helped you on your journey home. You have been reunited with Princess Megan Organa and Marty Solo, the story of your journey will be spoken about for generations to come.'
 }, {
     img: 'img/new-game-over.png',
     text: 'Oh no! You’ve been a bad dog! Your selfish deeds have caught the eye of Darth Journey, and he’s now grooming you as his apprentice. The ground is hard, the treats are scarce, and your new uniform is really itchy.'
