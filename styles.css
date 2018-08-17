@@ -377,6 +377,7 @@ body, html {
 	margin: 0 auto;
 	display: grid;
 	align-items: center;
+	justify-items: center;
 	
 	
 	grid-template-areas: 
@@ -410,6 +411,7 @@ body, html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	max-width: 85%;
 	grid-area: uparrow;	
 }
 
