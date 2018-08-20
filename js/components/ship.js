@@ -1,10 +1,12 @@
 import html from '../html.js';
 
 let template = function(ship) {
+    // don't use this as a way to navigate away,
+    // because work (selecting the ship) may not be done
     return html`
-         <a href="direction.html" class="ship-link">
+        <p class="ship-link">
             <img class="ship-image bounce" src="${ship.img}"> 
-        </a>
+        </p>
    `;
 };
 

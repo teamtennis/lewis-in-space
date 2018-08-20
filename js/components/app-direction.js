@@ -10,15 +10,17 @@ let template = function(user) {
                      
             <p class="direction-text">Which direction will Lewis choose to fly? Click an arrow.</p>
     
-            <a href="event.html" class="left-arrow grow2">
-            <img src="img/left-arrow.png" width=40%/>   
-            
-            <a href="event.html" class="up-arrow grow2">
-            <img src="img/up-arrow.png" width=40%/>     
-            
-            <a href="event.html" class="right-arrow grow2">
-            <img src="img/right-arrow.png" width=40%/> 
+            <p class="left-arrow grow2">
+                <img src="img/left-arrow.png" width=40%/>   
+            </p>
 
+            <p class="up-arrow grow2">
+                <img src="img/up-arrow.png" width=40%/>     
+            </p>
+
+            <p class="right-arrow grow2">
+                <img src="img/right-arrow.png" width=40%/> 
+            </p>
         </div>   
     `;
 };
@@ -46,13 +48,17 @@ export default class DirectionApp {
         }
        
         upArrow.addEventListener('click', () => {
+            // would be better to track "user.currentPath"
             user.path.push(0);
+            window.location.href = 'event.html';
         });
         leftArrow.addEventListener('click', () => {
             user.path.push(1);
+            window.location.href = 'event.html';
         });
         rightArrow.addEventListener('click', () => {
             user.path.push(2);
+            window.location.href = 'event.html';
         });
 
         return dom;

@@ -1,18 +1,12 @@
 import html from '../html.js';
+import ChoiceButton from './choice-button';
 
-let template = function(storyEvent, eventIndex, choice1, choice2) {
+let template = function() {
     return html`
         <section class="two-choices">
             <h2>What will you choose to do?</h2>
             <div class="choices">
-                <div class="choice">
-                    <p>${storyEvent[choice1]}</p>
-                    <button type="submit" value="1" name="choice${eventIndex}aResult" class="choicea grow"></button>
-                </div>  
-                <div class="choice">
-                    <p>${storyEvent[choice2]}</p>
-                    <button type="submit" value="-1" name="choice${eventIndex}bResult" class="choiceb grow"></button>
-                </div> 
+                <!-- Looks like a ChoiceButton component, no need to repeat! --> 
             </div> 
         </section>
    `;
@@ -27,21 +21,24 @@ export default class Choice {
     }
 
     render() {
-        let eventIndex = this.eventIndex;
-        let choice1 = 'choice' + [eventIndex] + 'a';
-        let choice2 = 'choice' + [eventIndex] + 'b';
-        let dom = template(this.storyEvent, eventIndex, choice1, choice2);
-        let button1 = dom.querySelector('.choicea');
-        let button2 = dom.querySelector('.choiceb');
-        
-        button1.addEventListener('click', () => {
-            this.onClick(button1);
-        });
+        let dom = template();
+        let choices = dom.querySelector('.choices');
 
-        button2.addEventListener('click', () => {
-            this.onClick(button2);
-            this.mirror.push(eventIndex);
-        });
+        // see changes I made in `api.js` to events;
+        let eventChoices = this.storyEvent.choices;
+
+        for(let i = 0; i < eventChoices.length; i++) {
+            let eventChoice = eventChoices[i];
+            let choiceButton = new ChoiceButton({
+                label: eventChoice.label,
+                onChoose: () => {
+                    // we implicitly know "which" choice via closure
+                    this.onChoose(eventChoice);
+                }
+            });
+
+            choices.appendChild(choiceButton.render());
+        }
 
         return dom;
     }

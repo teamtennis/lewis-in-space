@@ -1,7 +1,7 @@
 import html from '../html.js';
 import api from '../services/api.js';
 
-let template = function() {
+let template = function(darknessLevel) {
     return html`   
         <a class="game-continue-button grow" href="direction.html"></a>
         <a class="ending-button grow" href="ending.html"></a>
@@ -9,9 +9,7 @@ let template = function() {
             <h1>Lewis, You've Changed</h1>
             <h2>Take a look in the mirror...<h2>
         </div>
-        <img class="mirror1 mirror" src="img/dark-influence-1.jpg">
-        <img class="mirror2 mirror" src="img/dark-influence-2.jpg">
-        <img class="mirror3 mirror" src="img/dark-influence-3.jpg">
+        <img class="mirror" src="img/dark-influence-${darknessLevel}.jpg">
     `;
 };
 
@@ -21,30 +19,19 @@ export default class DarkInfluence {
     }
 
     render() {
-        let dom = template();
-        let user = this.user[0];
-        let mirror1 = dom.querySelector('.mirror1');
-        let mirror2 = dom.querySelector('.mirror2');
-        let mirror3 = dom.querySelector('.mirror3');
-        let choiceNumber = user.choices.length;
+        let user = this.user;
+        let darknessLevel = user.mirror.length;
+        let dom = template(darknessLevel);
+        
+        if(!darknessLevel) {
+            let image = dom.querySelector('img');
+            image.style.display = 'none';
+        }
+        
         let continueButton = dom.querySelector('.game-continue-button');
         let endingButton = dom.querySelector('.ending-button');
 
-        if(user.mirror.length === 1) {
-            mirror1.style.display = 'block';
-            mirror2.style.display = 'none';
-            mirror3.style.display = 'none';
-        } else if(user.mirror.length === 2) {
-            mirror1.style.display = 'none';
-            mirror2.style.display = 'block';
-            mirror3.style.display = 'none';
-        } else if(user.mirror.length === 3) {
-            mirror1.style.display = 'none';
-            mirror2.style.display = 'none';
-            mirror3.style.display = 'block';
-        }
-
-        if(choiceNumber < 3) {
+        if(user.choices.length < 3) {
             continueButton.style.display = 'block';
             endingButton.style.display = 'none';
         }
