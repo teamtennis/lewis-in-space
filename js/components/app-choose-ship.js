@@ -21,15 +21,20 @@ export default class ChooseShipApp {
     }
 
     render() {
-        let user = this.user[0];
-        
-        window.addEventListener('load', () => {
-            user.score = 0;
-            user.choices = [];
-            user.path = [];
-            user.userShip = '';
-            user.mirror = [];
-        });
+        // change to object, don't need array...
+        let user = this.user;
+
+        // this is already done in "createUser".
+        // If you are trying to reset, you need to
+        // add a method to the api
+
+        // window.addEventListener('load', () => {
+        //     user.score = 0;
+        //     user.choices = [];
+        //     user.path = [];
+        //     user.userShip = '';
+        //     user.mirror = [];
+        // });
 
         let dom = template();
         let shipChoice = dom.querySelector('.ship-choices');
@@ -37,11 +42,14 @@ export default class ChooseShipApp {
         for(var i = 0; i < this.ships.length; i++) {
             let ship = new Ship ({
                 ship: this.ships[i],
-                user: this.user,
-                
                 onSelect: (ship) => {
-                    user.userShip = '';
+                    // unnecessary...
+                    // user.userShip = '';
+                    
                     user.userShip = ship.img;
+
+                    // navigate here, once the data has been changed
+                    window.location.href = 'direction.html';
                 }
             });
     

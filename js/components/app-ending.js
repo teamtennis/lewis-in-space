@@ -16,30 +16,25 @@ export default class EndingApp {
 
     render() {
         let dom = template();
-        let user = this.user[0];
+        let user = this.user;
         let userScore = user.score;
         let choiceNumber = user.choices.length;
         let endingArea = dom.querySelector('.ending');
         let endings = this.storyEndings;
         let userEnding;
-        let music;
 
         if(choiceNumber >= 3 && userScore === 3) {
             userEnding = endings[0];
-            music = 'music/cantina-band.mp3';
         }
         else if(choiceNumber >= 3 && userScore === 1) {
             userEnding = endings[1];
-            music = 'music/cantina-band.mp3';
         }
         else if(choiceNumber >= 3 && userScore < 0) {
             userEnding = endings[2];
-            music = 'music/imperialborks.mp3';
         }
 
         let ending = new Ending ({
-            ending: userEnding,
-            music: music
+            ending: userEnding
         });
 
         endingArea.appendChild(ending.render());

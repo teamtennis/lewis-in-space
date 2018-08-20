@@ -1,33 +1,26 @@
 import html from '../html.js';
 
-let template = function(image, text, music) {
+let template = function(ending) {
     return html`
-        <h2 class="ending-text">${text}</h2>
+        <h2 class="ending-text">${ending.text}</h2>
         <a class="game-continue-button" href="about.html"></a>
-        <img class="ending-image" src="${image}">
+        <img class="ending-image" src="${ending.image}">
         <audio class="imperial-barks" autoplay>
-        <source src="${music}" type="audio/mpeg">
+        <source src="${ending.music}" type="audio/mpeg">
    `;
 };
 
 export default class Ending {
     constructor(props) {
         this.ending = props.ending;   
-        this.music = props.music;    
     }
 
     render() {
-        let endingImage = this.ending.img;
-        let endingText = this.ending.text;
-        let music = this.music;
-        let dom = template(endingImage, endingText, music);
+        let dom = template(this.ending);
         let audio = dom.querySelector('.imperial-barks');
-
         audio.onMouseMove = function() {
             audio.play();
         };
-
-        
         return dom;
     }
 }

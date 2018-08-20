@@ -7,7 +7,7 @@ let template = function(resultText) {
         <div class="poker-text">
             <h1>Dog Playing Poker</h1>
             <p>Lewis's space ship runs on snack fuel and he no longer has enough snacks to continue on his journey. He is a dog shark at the poker table, so he seeks out a nearby game, but no dog can win all the time. He bets the only thing he has, his ship. Click the button below to find out if Lewis wins enough snacks to continue his journey. </p>
-            <button class="results-button grow" type="submit"></button>
+            <button class="results-button grow">Shouldn't there be a choice here?</button>
         </div>
         <div class="game-results">
             <h2>You played your best and...</h2>
@@ -25,13 +25,10 @@ export default class GetSnacksApp {
     }
 
     render() {
-        let user = this.user[0];
+        let user = this.user;
         let choiceNumber = user.choices.length;
 
-        function randomNumber() {
-            return (Math.random() * 10);
-        }
-        let randomNum = randomNumber();
+        let randomNum = Math.random() * 10;
 
         let resultText;
 

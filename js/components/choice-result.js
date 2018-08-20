@@ -11,23 +11,16 @@ let template = function(text) {
 
 export default class ChoiceResult {
     constructor(props) {
-        this.result = props.result;
-        this.storyEvent = props.storyEvent;
-        this.choiceNumber = props.choiceNumber;
+        this.eventChoice = props.eventChoice;
     }
 
     render() {
-        let text = this.storyEvent[this.result];
-        let url;
-        let dom = template(text, url);
+        let dom = template(this.eventChoice.result);
+
         let getFuelButton = dom.querySelector('.get-fuel-button');
         let darkInfluenceButton = dom.querySelector('.dark-influence-button');
-        let result = this.result;
-
-
-        let darkChoice = result.indexOf('b');
-    
-        if(darkChoice !== -1) {
+        
+        if(this.eventChoice.isDark) {
             darkInfluenceButton.style.display = 'block';
             getFuelButton.style.display = 'none';
         } else {

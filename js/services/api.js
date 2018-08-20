@@ -8,13 +8,14 @@ if(!user) {
 }
 
 function createUser() {
-    let data = [{
+    // No array needed, right? 
+    let data = {
         score: 0,
         choices: [],
         path: [],
         userShip: '',
         mirror: []
-    }];
+    };
     return data;
 }
 
@@ -27,14 +28,28 @@ let ships = [{
     img: 'img/ufo.png'    
 }];
 
+// these "magic" keys will bite you eventually. Each story data should be the same.
+// Figure out which story event by index, then use consistent data structure
+
 let storyEvents = [{
     title: 'Slime Pirates',
     text: 'You fell asleep at the controls and drifted off course. You wake abruptly, salivating, to the sound of a warning bell. You check your radar and are horrified to see a slime pirate ship has found you and it is closing in fast. You start up your engine, preparing to flee. Your space ship is low on snack fuel and as soon as you run out, the slime pirates will catch you, steal your ship, and turn you into a slime dog.',
     img: 'img/space-pirates.png',  
-    choice0a: 'You flee into a nearby asteroid field where you hope you can outmaneuver or hide from the slime pirates.',
-    choice0b: 'Remembering your promise to always come home to Princess Megan Organa, and knowing there is very little hope of escaping with the fuel you have left, you make a difficult decision: you hail the pirate ship and tell them about a nearby cruise ship full of rich creatures they could raid instead.',
-    choice0aResult: 'The slime pirates followed you into the asteroid field. During the chase, the slime pirates\' ship sustained damage in an asteroid collision and turned back. As you passed out of the asteroid field, you ran out of fuel and drifted through space until a passing cargo ship picked your ship up.',
-    choice0bResult: 'The slime pirates thank you for telling them about the cruise ship, but they want to take your ship and turn you into a slime dog anyway. Lucky for you, the cruise ship changes course and the pirates only have time to raid one of you. They chase the cruise ship, leaving you with enough fuel to continue your journey. You convince yourself that the cruise ship\'s security team will prevent the slime pirates from hurting any passengers.'
+    // choices is an array.
+    // notice we can handle more than two buttons
+    // and each button is assigned an outcome that indicates light side / dark side
+    choices: [{
+        label: 'You flee into a nearby asteroid field where you hope you can outmaneuver or hide from the slime pirates.',
+        result: 'The slime pirates followed you into the asteroid field. During the chase, the slime pirates\' ship sustained damage in an asteroid collision and turned back. As you passed out of the asteroid field, you ran out of fuel and drifted through space until a passing cargo ship picked your ship up.',
+        outcome: 10,
+        isDark: false
+    }, {
+
+        label: 'Remembering your promise to always come home to Princess Megan Organa, and knowing there is very little hope of escaping with the fuel you have left, you make a difficult decision: you hail the pirate ship and tell them about a nearby cruise ship full of rich creatures they could raid instead.',
+        result: 'The slime pirates thank you for telling them about the cruise ship, but they want to take your ship and turn you into a slime dog anyway. Lucky for you, the cruise ship changes course and the pirates only have time to raid one of you. They chase the cruise ship, leaving you with enough fuel to continue your journey. You convince yourself that the cruise ship\'s security team will prevent the slime pirates from hurting any passengers.',
+        outcome: -10,
+        isDark: true
+    }] 
 }, {
     title: 'Distress Signal from Furtuna9',
     text: 'While trying to pass unnoticed through the cat-space, where no dogs are allowed, you receive a distress signal from the cat planet Furtuna9. An asteroid big enough to destroy a major city is heading straight toward their planet, and you are the only ship close enough to take action to divert it.',
@@ -55,13 +70,16 @@ let storyEvents = [{
 
 let storyEndings = [{
     img: 'img/win-ending.png',
-    text: 'You are a good dog! You stayed on the path of righteousness. You will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come.'
+    text: 'You are a good dog! You stayed on the path of righteousness. You will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come.',
+    music: 'music/cantina-band.mp3'
 }, {
     img: 'img/win-ending.png',
-    text: 'You made a seriously questionable choice in the course of your travels, but you veered toward courage and caring for others, and that helped you on your journey home. You have been reunited with Princess Megan Organa and Marty Solo and your story will be told for generations to come.'
+    text: 'You made a seriously questionable choice in the course of your travels, but you veered toward courage and caring for others, and that helped you on your journey home. You have been reunited with Princess Megan Organa and Marty Solo and your story will be told for generations to come.',
+    music: 'music/cantina-band.mp3'
 }, {
     img: 'img/new-game-over.png',
-    text: 'Oh no! You’ve been a bad dog! Your selfish deeds have caught the eye of Darth Journey, and he’s now grooming you as his apprentice. The ground is hard, the treats are scarce, and your new uniform is really itchy.'
+    text: 'Oh no! You’ve been a bad dog! Your selfish deeds have caught the eye of Darth Journey, and he’s now grooming you as his apprentice. The ground is hard, the treats are scarce, and your new uniform is really itchy.',
+    music: 'music/imperialborks.mp3'
 }];
 
 export default {
