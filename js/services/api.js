@@ -50,7 +50,9 @@ let storyEvents = [{
         outcome: -10,
         isDark: true
     }] 
-}, {
+}, 
+// etc...
+{
     title: 'Distress Signal from Furtuna9',
     text: 'While trying to pass unnoticed through the cat-space, where no dogs are allowed, you receive a distress signal from the cat planet Furtuna9. An asteroid big enough to destroy a major city is heading straight toward their planet, and you are the only ship close enough to take action to divert it.',
     img: 'img/asteroid.png',  
@@ -68,6 +70,7 @@ let storyEvents = [{
     choice2bResult: 'You fly away from Algid after a short, pleasant visit. You were clear about your boundaries, and that\'s important in a friendship, right? You hope Fluffy does the right thing, using those snacks to find work rather than binge eating them.'
 }];
 
+// store the music here with the rest of the story ending data
 let storyEndings = [{
     img: 'img/win-ending.png',
     text: 'You are a good dog! You stayed on the path of righteousness. You will be rewarded for your exceptional acts of compassion with an infinite amount of treats! Now reunited with Princess Megan Organa and Marty Solo, the tales of your heroism will be spoken about for generations to come.',
@@ -99,5 +102,4 @@ export default {
     getEndings: function() {
         return storyEndings;
     }
-
 };
